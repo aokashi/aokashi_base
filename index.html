@@ -6,9 +6,9 @@
 		<title>AokashiBase</title>
 	</head>
 	<body>
-		<header>
-			<h1><a href="#">Aokashi Base</a></h1>
-			<nav>
+		<header id="header">
+			<h1 id="header_title"><a href="#">Aokashi Base</a></h1>
+			<nav id="header_menu">
 				<ul>
 					<li><a href="#">Home</a></li>
 					<li><a href="#">Item</a></li>
@@ -16,23 +16,8 @@
 				</ul>
 			</nav>
 		</header>
-		<main>
-			<aside id="sidebar">
-				<nav>
-					<ul>
-						<li><a href="#">Item</a></li>
-						<li><a href="#">Item</a></li>
-						<li><a href="#">Item</a></li>
-					</ul>
-				</nav>
-				<section>
-					<h2>サイドバー</h2>
-				</section>
-				<section>
-					<h2>サイドバー</h2>
-				</section>
-			</aside>
-			<div id="main_container">
+		<main id="main">
+			<div id="main_content">
 				<section>
 					<header>
 						<h2>ページタイトル</h2>
@@ -97,9 +82,24 @@
 					</article>
 				</section>
 			</div>
+			<aside id="main_sidebar">
+				<nav>
+					<ul>
+						<li><a href="#">Item</a></li>
+						<li><a href="#">Item</a></li>
+						<li><a href="#">Item</a></li>
+					</ul>
+				</nav>
+				<section>
+					<h2>サイドバー</h2>
+				</section>
+				<section>
+					<h2>サイドバー</h2>
+				</section>
+			</aside>
 		</main>
-		<footer>
-			<aside>
+		<footer id="footer">
+			<aside id="footer_content">
 				<section>
 					<h2>フッターコンテンツ</h2>
 				</section>
@@ -107,6 +107,9 @@
 					<h2>フッターコンテンツ</h2>
 				</section>
 			</aside>
+			<div id="footer_copyright">
+				<p>Copyright © 2015 Aokashi All rights reserved.</p>
+			</div>
 		</footer>
 	</body>
 </html>
