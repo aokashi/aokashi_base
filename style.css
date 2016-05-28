@@ -1,5 +1,17 @@
 /* 基本セット */
 
+blockquote,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul{
+	margin: 1rem 0;
+}
+
 h1,
 h2,
 h3,
@@ -33,9 +45,43 @@ h6{
 	font-size: 1rem;
 }
 
+li > ol,
+li > ul{
+	margin: .5rem;
+}
+
 nav > ul{
 	list-style: none;
 	padding-left: 1rem;
+}
+
+ol,
+ul{
+	padding-left: 2rem;
+}
+
+ol{
+	list-style: decimal;
+}
+
+li > ol{
+	list-style: lower-alpha;
+}
+
+li li > ol{
+	list-style: lower-roman;
+}
+
+ul{
+	list-style: disc;
+}
+
+li > ul{
+	list-style: square;
+}
+
+li li > ul{
+	list-style: circle;
 }
 
 /* ここから開始 */
@@ -44,6 +90,12 @@ body{
 	background-color: #C0C0C0;
 	color: #000080;
 	margin: 0;
+}
+
+#header,
+#main,
+#footer{
+	margin: 0 1rem;
 }
 
 #header{
@@ -63,13 +115,19 @@ body{
 }
 
 #header_menu{
+	background-color: #6060A0;
+	color: #C0C0C0;
 	display: block;
 	list-style: none;
 }
 
+#header_menu > ul{
+	margin: 0;
+}
+
 #header_menu li{
 	display: inline-block;
-	width: 25%;
+	width: 100%;
 }
 
 #header_menu a{
@@ -78,6 +136,10 @@ body{
 	margin: .25rem;
 	padding: .25rem;
 	text-align: center;
+}
+
+#header_menu a:hover{
+	font-weight: bold;
 }
 
 #main{
@@ -129,7 +191,19 @@ body{
 	padding: .5rem;
 }
 
+/* タブレットモード */
+@media(min-width: 32rem){
+	#header_menu li{
+		width: 50%;
+	}
+}
+
+/* ノートPCモード */
 @media(min-width: 64rem){
+	#header_menu li{
+		width: 20%;
+	}
+	
 	#main{
 		flex-direction: row-reverse;
 	}
