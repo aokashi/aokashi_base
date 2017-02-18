@@ -1,0 +1,22 @@
+@charset "utf-8";
+@import "base.css";
+@import "module.css";
+
+/* テーマルール */
+
+/* タブレットモード */
+@media(min-width: 32rem){
+
+}
+
+/* デスクトップPCモード */
+@media(min-width: 96rem){
+
+  /* モジュールルール */
+
+  .wrap{
+    margin: 0 auto;
+    width: 92rem;
+  }
+
+}

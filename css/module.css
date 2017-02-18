@@ -1,0 +1,55 @@
+/*
+---------------
+モジュールルール
+---------------
+*/
+
+.doc blockquote,
+.doc h3,
+.doc h4,
+.doc h5,
+.doc ol,
+.doc ul {
+  margin: 1rem 0;
+}
+
+.doc h3,
+.doc h4,
+.doc h5{
+  margin: 1rem 0;
+  padding: .5rem;
+}
+
+.doc h3 {
+  background: #c0c0c0 url('heading_mark.png') no-repeat 8px center;
+  border: 6px double #000080;
+  padding-left: 48px;
+}
+
+.doc h4 {
+  border-bottom: 2px solid #000080;
+}
+
+.doc h5 {
+  border-left: 1rem solid #000080;
+}
+
+.doc ul,
+.doc ol {
+  padding-left: 2rem;
+}
+
+/*
+-------------
+ステートルール
+-------------
+*/
+
+.is-page .l-header {
+  border-bottom: 2px solid #000080;
+}
+
+.is-page .l-main {
+  background: #fff url('main_background.png') repeat 0 0;
+  color: #000;
+}
