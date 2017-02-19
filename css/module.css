@@ -4,7 +4,20 @@
 ---------------
 */
 
+.doc a:link {
+  color: #008080;
+}
+
+.doc a:visited {
+  color: #800080;
+}
+
+.doc a:hover {
+  text-decoration: underline;
+}
+
 .doc blockquote,
+.doc dl,
 .doc h3,
 .doc h4,
 .doc h5,
@@ -38,6 +51,30 @@
 .doc ol {
   padding-left: 2rem;
 }
+
+  .doc ol{
+    list-style: decimal;
+  }
+
+    .doc li > ol{
+      list-style: lower-alpha;
+    }
+
+    .doc li li > ol{
+      list-style: lower-roman;
+    }
+
+  .doc ul{
+    list-style: disc;
+  }
+
+    .doc li > ul{
+      list-style: square;
+    }
+
+    .doc li li > ul{
+      list-style: circle;
+    }
 
 /*
 -------------

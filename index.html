@@ -24,6 +24,13 @@
       <div class="wrap">
         <section class="l-main-contents">
           <header class="l-main-contents-header">
+            <nav class="l-main-contents-header-topicpath">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">コンテンツ一覧</a></li>
+                <li>ここ</li>
+              </ul>
+            </nav>
             <h2 class="l-main-contents-header-title">新しいAokashi Homeのテンプレート「Aokashi Base」</h2>
           </header>
           <article class="l-main-contents-article doc">
@@ -36,10 +43,11 @@
                 <p>見てもわかりやすい、利用しやすいことを目標としています。</p>
                 <section>
                   <h5>CSSファイルの役割</h5>
-                  <p>各CSSファイルは以下のルールに従います。スタイルシートのファイルはなるべく増やさないように留めます。これは、閲覧環境の幅を@mediaクエリーで分岐する都合上、幅の基準値を多めに付けたくないからです。</p>
+                  <p>各CSSファイルは以下のルールに従います。ただし、@mediaクエリーによる条件分岐はルール関わらずすべてstyle.cssにまとめています。</p>
                   <ul>
                     <li>style.css: スタイルシート本体、テーマルール</li>
-                    <li>base.css: ベースルール、レイアウトルール</li>
+                    <li>base.css: ベースルール</li>
+                    <li>layout.css: レイアウトルール</li>
                     <li>module.css: モジュールルール、ステートルール</li>
                   </ul>
                 </section>
