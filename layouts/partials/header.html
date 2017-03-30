@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1, user-scalable=no">
+    {{ .Hugo.Generator }}
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/sanitize.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+    <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
+  </head>
+  <body class="{{ if .IsHome }}is-index{{ else }}is-page{{ end }}">
+    <header class="l-header">
+      <div class="l-wrap is-center">
+        <h1 class="l-header-title">
+          {{ if .IsHome }}<img src="{{ .Site.BaseURL }}img/header_title.png" alt="{{ .Site.Title }}">
+        {{ else }}<a href="{{ .Site.BaseURL }}" title="Aokashi Home"><img src="{{ .Site.BaseURL }}img/header_title.png" alt="{{ .Site.Title }}"></a>
+        {{ end }}</h1>
+        <nav class="l-header-nav">
+          <ul>
+            {{ if not .IsHome }}<li class="l-header-nav-home"><a href="{{ .Site.BaseURL }}" title="HOME">HOME</a></li>{{ end }}{{ range .Site.Menus.main }}
+            <li class="l-header-nav-{{ .Identifier }}"><a href="{{ .URL }}" title="{{ .Name }}">{{ upper .Identifier }}</a></li>{{ end }}
+          </ul>
+        </nav>
+      </div>
+    </header>

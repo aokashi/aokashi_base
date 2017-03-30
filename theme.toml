@@ -1,0 +1,21 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/spf13/hugoThemes#themetoml for an example
+
+name = "Aokashi Base"
+license = "MIT"
+licenselink = "https://github.com/aokashi/aokashi_base/blob/master/LICENSE"
+description = "Hugo Template for Aokashi Home"
+homepage = "http://www.aokashi.net/"
+tags = []
+features = []
+min_version = 0.1
+
+[author]
+  name = "Aokashi"
+  homepage = "http://www.aokashi.net"
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""
