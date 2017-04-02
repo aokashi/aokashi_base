@@ -91,6 +91,22 @@ img {
   padding: .25rem;
 }
 
+.l-doc table {
+  border: 1px solid #808080;
+  border-collapse: separate;
+  border-spacing: 1px;
+}
+
+.l-doc td,
+.l-doc th {
+  border: 1px solid #808080;
+  padding: .25rem;
+}
+
+.l-doc th {
+  background-color: #e0e0e0;
+}
+
 /* .l-header */
 
 .l-header {
@@ -679,7 +695,9 @@ img {
   }
 
     .l-main .l-wrap.is-left {
+      display: flex; /* Safariでメニューを縦いっぱいに表示する */
       flex: 1 0 14rem;
+      flex-flow: row wrap; /* 万が一のために余計な要素は下に逃す */
       order: 1;
     }
 
@@ -693,10 +711,12 @@ img {
       order: 3;
     }
 
-  .l-main-nav,
   .l-main-toc {
-    height: 100%;
     width: 14rem;
+  }
+
+  .l-main-nav { /* display: flex; と指定した .l-wrap.is-left の子要素 */
+    flex: 0 0 14rem;
   }
 
   .l-main-nav .menus {
