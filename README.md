@@ -16,6 +16,19 @@ HTML5の規則に沿ってHTMLタグを構成しています。
 
 MIT License. (詳細はLICENSEファイルを参照のこと。)
 
+# developブランチ向け
+
+## AngularでWWAのリストを表示する
+```html
+<div ng-repeat="WWA in WWAs" class="intro">
+  <img src="scr/{{ WWA.id }}.gif" alt="{{ WWA.id }}.gif" class="intros is-icon" width="440" height="440">
+  <section class="intros is-description">
+    <h6 class="intros-title">[{{ WWA.number }}] <a href="{{ WWA.id }}.html">{{ WWA.name }}</a></h6>
+    <p>{{ WWA.description }}</p>
+  </section>
+</div>
+```
+
 # 参考になったページ
 
 - https://smacss.com/ - SMACSSについて、簡単な説明程度ですが、英語で見ることができます(2017年2月17日閲覧)
