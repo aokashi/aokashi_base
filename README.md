@@ -19,6 +19,31 @@ MIT License. (詳細はLICENSEファイルを参照のこと。)
 # developブランチ向け
 
 ## AngularでWWAのリストを表示する
+- AngularJS v1.6.4
+- js(1つ目)はwwalist.jsで、サイトの `/static/js/` ディレクトリに保存
+- HTML(2つ目)は適当なmarkdownファイルに追加して保存
+
+```js
+var wwalistApp = angular.module('wwalistApp', []);
+
+wwalistApp.controller('wwalistController', function wwalistController($scope) {
+  $scope.WWAs = [
+    {
+      id: "order_life",
+      number: "001",
+      name: "依頼生活",
+      description: "『ハズツ国』にモンスターが来ると言われ、それを阻止するのが目的です。 初めてつくるWWAです。"
+    },
+    {
+      id: "eito_city",
+      number: "002",
+      name: "英棟市",
+      description: "仮想の街に楽しむシンプルなWWAです。 部屋を作り、永住登録をすることで作った部屋がWWAに出てきます。"
+    }
+  ]
+});
+```
+
 ```html
 <div ng-repeat="WWA in WWAs" class="intro">
   <img src="scr/{{ WWA.id }}.gif" alt="{{ WWA.id }}.gif" class="intros is-icon" width="440" height="440">
