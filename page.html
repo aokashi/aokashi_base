@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <base href="./static/">
+    <link rel="stylesheet" href="css/sanitize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>AokashiBase</title>
+  </head>
+  <body class="is-page">
+    <header class="l-header">
+      <div class="l-wrap is-center">
+        <h1 class="l-header-title"><a href="#" title="Aokashi Home"><img src="header_title.png" alt="Aokashi Home"></a></h1>
+        <nav class="l-header-nav">
+          <ul>
+            <li class="l-header-nav-home"><a href="#" title="ホーム">HOME</a></li>
+            <li class="l-header-nav-wwa"><a href="#" title="WWA">WWA</a></li>
+            <li class="l-header-nav-works"><a href="#" title="作品">WORKS</a></li>
+            <li class="l-header-nav-materials"><a href="#" title="素材">MATERIALS</a></li>
+            <li class="l-header-nav-docs"><a href="#" title="資料">DOCS</a></li>
+            <li class="l-header-nav-aboutme"><a href="#" title="Aokashiについて">ABOUTME</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="l-main">
+      <div class="l-wrap is-center">
+        <div class="l-main-content">
+          <section class="l-main-contents">
+            <header class="l-main-contents-header block">
+              <nav class="blocks topicpath">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">コンテンツ一覧</a></li>
+                  <li><span class="topicpath-here">ここ</span></li>
+                </ul>
+              </nav>
+              <h2 class="l-main-contents-header-title">新しいAokashi Homeのテンプレート「Aokashi Base」</h2>
+              <div class="blocks"><time datetime="2017-03-24">2017年3月24日</time></div>
+            </header>
+            <article class="l-main-contents-article l-doc">
+              <p>「Aokashi Base」はAokashi Homeの新しい形を作るテンプレートです。先進的なデザインと旧Webサイトの伝統を維持を両立しました。</p>
+              <section>
+                <h3 id="特徴">特徴</h3>
+                <section>
+                  <h4 id="CSSルールを定義">CSSルールを定義</h4>
+                  <p>CSSルールは独自に決めたものを利用せず、新たにSMACSSを採用することにしました。</p>
+                  <p>見てもわかりやすい、利用しやすいことを目標としています。</p>
+                  <section>
+                    <h5 id="CSSの各ルールについて">CSSの各ルールについて</h5>
+                    <p>CSSファイルは初期化用のsanitize.cssとスタイルシート本体のstyle.cssの2つからなっています。</p>
+                    <ul>
+                      <li>ベースルール: sanitize.cssを使用</li>
+                      <li>レイアウトルール(Layout Rule): .l-から始まるクラスのセレクタ群</li>
+                      <li>モジュールルール(Module Rule): 特殊な接頭辞が付かない、再利用前提のセレクタ群</li>
+                      <li>ステートルール(State Rule): .is-から始まるクラスのセレクタ群</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h5 id="クラス名の付け方">クラス名の付け方</h5>
+                    <p>CSSが適用される各要素にはIDが付いていません。パフォーマンスの向上のため、IDはJavaScriptのフック目的でのみ使用します。</p>
+                    <ul>
+                      <li>接頭辞について
+                        <ul>
+                          <li>レイアウトルールの各要素: l-</li>
+                          <li>ステートルールの各要素: is-</li>
+                        </ul>
+                      </li>
+                      <li>末尾について
+                        <ul>
+                          <li>複数要素あるうちの各要素: s ... 例えばフッターコンテンツ内にある各項目。ここではfooter-contentsというクラス名で使います。</li>
+                        </ul>
+                      </li>
+                      <li>要素と要素のつなぎ
+                        <ul>
+                          <li>要素と要素の連結は基本的に-でつなぐ</li>
+                          <li>また、各要素の名前は長くならないようにわかりやすい範囲で短く記述する</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h5 id="レイアウト汎用クラスについて">レイアウト汎用クラスについて</h5>
+                    <ul>
+                      <li>l-wrap: 内容の幅
+                        <ul>
+                          <li>is-left: 左に置くもの</li>
+                          <li>is-center: 中央に置くもの</li>
+                          <li>is-right: 右に置くもの</li>
+                        </ul>
+                      </li>
+                      <li>l-doc: 文章に使えるタグが使用可能な範囲</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h5 id="モジュールクラスについて">モジュールクラスについて</h5>
+                    <ul>
+                      <li>box: 分割可能な汎用ボックス
+                      <ul>
+                        <li>is-cols-2: 2分割</li>
+                        <li>is-cols-3: 3分割</li>
+                      </ul></li>
+                      <li>introduction: アイコン付きの説明ボックス(2分割固定)</li>
+                      <li>block: 隙間なしの汎用ボックス</li>
+                      <li>note: 注意、情報、警告に使える補足情報</li>
+                      <li>topicpath: パンくずリスト</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h5 id="タグの定義について">タグの定義について</h5>
+                    <p>タグの定義は今後変更する可能性があるため、CSSではクラス中心の定義とします。ただし、後の変更が難しい内容部分はタグの定義とします。</p>
+                    <ul>
+                      <li>h1: Webサイトのタイトル</li>
+                      <li>h2: ページのタイトル, フッターコンテンツの各見出し</li>
+                      <li>h3～h5: 見出し(3段構成)</li>
+                      <li>h6: .boxや.introductionとかの汎用クラスで使う見出し</li>
+                    </ul>
+                  </section>
+                </section>
+                <section>
+                  <h4 id="過去を引き継ぐカラー">過去を引き継ぐカラー</h4>
+                  <p>旧Webサイトで採用されたシルバーとネイビーのカラーを積極的に使用しました。</p>
+                  <p>ページ内容の背景色はコントラストを高めるため白を使用していますが、見出しや引用ではシルバーの背景を使用しています。</p>
+                </section>
+              </section>
+              <section>
+                <h3 id="サンプル">サンプル</h3>
+                <div class="intro">
+                  <section class="intros is-icon">
+                    <img src="aokashi.png" alt="aokashi.png" width="256" height="256">
+                  </section>
+                  <section class="intros is-description">
+                    <h6 class="intros-title">Aokashiについて</h6>
+                    <p>Aokashiです。何かしています。</p>
+                  </section>
+                </div>
+                <div class="box is-cols-3">
+                  <section class="boxes">
+                    <h6 class="boxes-title">新しいWebサイト</h2>
+                    <p>新しいWebサイトで差をつけよう。</p>
+                  </section>
+                  <section class="boxes">
+                    <h6 class="boxes-title">便利なモジュールで楽しく作る</h2>
+                    <p>モジュールを活用することでWebサイト作りが楽しくなります。</p>
+                  </section>
+                  <section class="boxes">
+                    <h6 class="boxes-title">レスポンシブデザイン</h2>
+                    <p>スマートフォンでも、タブレットでも。</p>
+                  </section>
+                </div>
+                <aside class="note is-notice">
+                  <p>この要素には実験的な内容が含まれています。</p>
+                </aside>
+                <aside class="note is-info">
+                  <p>このページではテクニックを利用することでより便利に閲覧することができます。</p>
+                </aside>
+                <aside class="note is-warn">
+                  <p>セキュリティ上の問題により、この行い方はおすすめできません。</p>
+                </aside>
+              </section>
+            </article>
+          </section>
+        </div>
+      </div>
+      <div class="l-wrap is-right">
+        <nav class="l-main-toc menu">
+          <h2 class="l-main-toc-title">目次</h2>
+          <nav id="TableOfContents">
+            <ul>
+              <li><ul>
+                <li><ul>
+                  <li><a href="#特徴">特徴</a><ul>
+                    <li><a href="#CSSルールを定義">CSSルールを定義</a><ul>
+                      <li><a href="#CSSの各ルールについて">CSSの各ルールについて</a></li>
+                      <li><a href="#クラス名の付け方">クラス名の付け方</a></li>
+                      <li><a href="#レイアウト汎用クラスについて">レイアウト汎用クラスについて</a></li>
+                      <li><a href="#モジュールクラスについて">モジュールクラスについて</a></li>
+                      <li><a href="#タグの定義について">タグの定義について</a></li></ul></li>
+                    <li><a href="#過去を引き継ぐカラー">過去を引き継ぐカラー</a></li></ul></li>
+                  <li><a href="#サンプル">サンプル</a></li>
+                </ul></li>
+              </ul></li>
+            </ul>
+          </nav>
+        </nav>
+      </div>
+      <div class="l-wrap is-left">
+        <nav class="l-main-nav menu">
+          <ul>
+            <li class="menus is-top"><a href="#" title="項目1">項目1</a></li>
+            <li class="menus"><a href="#" title="項目2">項目2</a></li>
+            <li class="menus"><a href="#" title="項目3">項目3</a></li>
+          </ul>
+        </nav>
+      </div>
+    </main>
+    <footer class="l-footer">
+      <div class="l-wrap">
+        <nav class="l-footer-menu menu is-inline">
+          <ul>
+            <li><a href="#" title="お知らせ">お知らせ</a></li>
+            <li><a href="#" title="当サイトについて">当サイトについて</a></li>
+          </ul>
+        </nav>
+        <nav class="l-footer-socialmenu socialmenu">
+          <ul>
+            <li class="socialmenus is-blog"><a href="#">Blog</a></li>
+            <li class="socialmenus is-twitter"><a href="#">Twitter</a></li>
+            <li class="socialmenus is-github"><a href="#">GitHub</a></li>
+          </ul>
+        </nav>
+        <div class="l-footer-copyright">
+          <p>Copyright © 2010-2017 Aokashi.</p>
+        </div>
+      </div>
+    </fotoer>
+  </body>
+</html>
