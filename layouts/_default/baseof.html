@@ -12,7 +12,15 @@
   {{ end }}
 </head>
 <body class="{{ if .IsHome }}is-index{{ else }}is-page{{ end }}">
-  {{ block "main" . }}
-  {{ end }}
+{{ block "header" . }}
+{{ partial "header.html" . }}
+{{ end }}
+
+{{ block "main" . }}
+{{ end }}
+
+{{ block "footer" . }}
+{{ partial "footer.html" . }}
+{{ end }}
 </body>
 </html>
