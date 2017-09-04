@@ -1,3 +1,26 @@
-{{ define "main" }}
+{{ define "header" }}
+  <header class="l-header">
+    <div class="l-wrap is-center">
+      <h1 class="l-header-title">
+        <img src="{{ .Site.BaseURL }}img/header_title.png" alt="{{ .Site.Title }}">
+      </h1>
+      <nav class="l-header-nav">
+        <ul>{{ range .Site.Menus.main }}
+          <li class="l-header-nav-{{ .Identifier }}"><a href="{{ .URL }}" title="{{ .Name }}">{{ upper .Identifier }}</a></li>{{ end }}
+        </ul>
+      </nav>
+    </div>
+  </header>
+{{ end }}
 
+{{ define "main" }}
+  <main class="l-main">
+    <div class="l-wrap is-center">
+      <div class="l-main-content l-doc">
+
+{{ partial "index_content.html" . }}
+
+      </div>
+    </div>
+  </main>
 {{ end }}
