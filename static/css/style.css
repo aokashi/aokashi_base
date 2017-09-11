@@ -119,13 +119,16 @@ img {
   }
 
 	.l-header-nav ul {
+    display: flex;
+    flex-flow: row nowrap; /* トップページも、内部ページもメニューは折り返さない */
 		padding: 0;
 	}
 
   .l-header-nav li {
     background-repeat: no-repeat;
-    /* アイコンの配置及び幅はステートルール参照のこと */
+    flex: 1 1 64px; /* 項目の最小幅は64px */
     height: 72px;
+    min-width: 64px;
   }
     
     .l-header-nav li:hover {
@@ -458,7 +461,6 @@ img {
 
   .is-page .l-header-nav ul {
     display: flex;
-    flex-flow: row nowrap; /* 記事ページのメニューは1行にすべての項目が表示される */
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
@@ -466,8 +468,6 @@ img {
 
   .is-page .l-header-nav li {
     background-position: center top;
-    flex: 1 1 64px; /* 項目の最小幅は64px */
-    min-width: 64px;
   }
 
   .is-page .l-header-nav a {
@@ -488,34 +488,6 @@ img {
 .is-page .l-footer {
   border-top: 2px solid #000080;
 }
-
-/* .is-index */
-
-  .is-index .l-header-nav ul {
-    display: flex;
-    flex-flow: row wrap; /* トップページのメニューは1行に2項目表示される、複数行表示*/
-  }
-
-  .is-index .l-header-nav li {
-    background-position: left center;
-    flex: 0 0 100%;
-  }
-
-  .is-index .l-header-nav a {
-    font-size: 1.6rem;
-    padding: .8rem 0 .8rem 52px;
-  }
-
-  .is-index .l-main-content .boxes {
-    background-color: #f0f0f0;
-    border: 2px solid #808080;
-  }
-
-  .is-index .l-main-content .boxes-title {
-    background-color: #c0c0c0;
-    border-bottom: 2px solid #808080;
-    font-size: 1.4rem;
-  }
 
 /* for module rule */
 
@@ -645,10 +617,6 @@ img {
   /* ヘッダーメニューの左右に余白を入れる */
   .is-page .l-header-nav ul {
     padding: 0 64px;
-  }
-
-  .is-index .l-header-nav li {
-    flex: 0 0 50%;
   }
 
   .is-page .l-main-content {

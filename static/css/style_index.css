@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+/* トップページ専用レイアウト */
+
+.l-header-nav li {
+  background-position: center center;
+}
+
+.l-header-nav a {
+  font-size: 1.6rem;
+  padding: .8rem 0 .8rem 52px;
+}
+
+.l-main-content .boxes {
+  background-color: #f0f0f0;
+  border: 2px solid #808080;
+}
+
+.l-main-content .boxes-title {
+  background-color: #c0c0c0;
+  border-bottom: 2px solid #808080;
+  font-size: 1.4rem;
+}
