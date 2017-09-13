@@ -112,6 +112,9 @@ img {
 .l-header {
   color: #000080;
 }
+.is-page .l-header {
+  border-bottom: 2px solid #000080;
+}
 
   .l-header-title {
     font-size: 2.2rem;
@@ -123,11 +126,21 @@ img {
     flex-flow: row nowrap; /* トップページも、内部ページもメニューは折り返さない */
     padding: 0;
   }
+  .is-page .l-header-nav ul {
+    display: flex;
+    height: 72px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
 
   .l-header-nav li {
     background-repeat: no-repeat;
     flex: 1 1 64px; /* 項目の最小幅は64px */
     min-width: 64px;
+  }
+  .is-page .l-header-nav li {
+    background-position: center top;
   }
     
     .l-header-nav li:hover {
@@ -141,6 +154,11 @@ img {
       font-weight: bold;
       margin: 0 auto;
       text-decoration: none;
+    }
+    .is-page .l-header-nav a {
+      letter-spacing: -.1rem;
+      padding-top: 50px; /* 50pxはアイコンの高さ48pxに余白2pxを加えた値 */
+      text-align: center;
     }
 
     .l-header-nav-home {
@@ -168,6 +186,15 @@ img {
     }
 
 /* .l-main */
+
+.is-page .l-main {
+  background: #fff url('main_background.png') repeat 0 0;
+  color: #404040;
+}
+
+  .is-page .l-main-content {
+    padding: 1rem .5rem;
+  }
 
   .l-main-contents-header,
   .l-main-contents h3,
@@ -255,6 +282,9 @@ img {
 
 .l-footer {
   font-size: .8rem;
+}
+.is-page .l-footer {
+  border-top: 2px solid #000080;
 }
 
   .l-footer-menu,
@@ -350,6 +380,10 @@ img {
   flex-flow: column wrap;
 }
 
+  .intros.is-icon {
+    margin: 0 auto;
+  }
+
   .intros-title {
     margin: 0 -.5rem 0 -.5rem;
   }
@@ -387,6 +421,24 @@ img {
   min-height: 64px; /* 64pxは48pxに余白分8pxを2つ足した値 */
   padding: .5rem .5rem .5rem 64px;
 }
+.note.is-notice {
+  background-color: #e0e080;
+  background-image: url('note-is-notice.png');
+  border: 2px solid #808000;
+  color: #404000;
+}
+.note.is-info {
+  background-color: #80e0e0;
+  background-image: url('note-is-info.png');
+  border: 2px solid #004080;
+  color: #000080;
+}
+.note.is-warn {
+  background-color: #f0a0a0;
+  background-image: url('note-is-warn.png');
+  border: 2px solid #c04040;
+  color: #400000;
+}
 
 /* .linkbutton */
 
@@ -420,6 +472,11 @@ img {
   padding: 0;
 }
 
+.menu.is-inline li {
+  display: inline;
+  padding: 0 1rem;
+}
+
 .menu a,
 .socialmenu a {
   color: inherit;
@@ -440,99 +497,19 @@ img {
   background-size: 24px 24px;
   display: inline-block;
 }
+.socialmenus.is-blog {
+  background-image: url('socialmenus_blog.png');
+}
+.socialmenus.is-twitter {
+  background-image: url('socialmenus_twitter.png');
+}
+.socialmenus.is-github {
+  background-image: url('socialmenus_github.png');
+}
 
 .socialmenus a {
   display: inline-block;
   padding: .25em .25em .25em 32px; /* 32pxはアイコンの24pxに余白分8pxを足した値 */
-}
-
-/*
- * ----------
- * State Rule
- * ----------
- */
-
-/* .is-page */
-
-.is-page .l-header {
-  border-bottom: 2px solid #000080;
-}
-  
-  .is-page .l-header-nav ul {
-    display: flex;
-    height: 72px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-  }
-
-  .is-page .l-header-nav li {
-    background-position: center top;
-  }
-
-  .is-page .l-header-nav a {
-    letter-spacing: -.1rem;
-    padding-top: 50px; /* 50pxはアイコンの高さ48pxに余白2pxを加えた値 */
-    text-align: center;
-  }
-
-.is-page .l-main {
-  background: #fff url('main_background.png') repeat 0 0;
-  color: #404040;
-}
-
-  .is-page .l-main-content {
-    padding: 1rem .5rem;
-  }
-
-.is-page .l-footer {
-  border-top: 2px solid #000080;
-}
-
-/* for module rule */
-
-.intros.is-icon {
-  margin: 0 auto;
-}
-
-.note.is-notice {
-  background-color: #e0e080;
-  background-image: url('note-is-notice.png');
-  border: 2px solid #808000;
-  color: #404000;
-}
-
-.note.is-info {
-  background-color: #80e0e0;
-  background-image: url('note-is-info.png');
-  border: 2px solid #004080;
-  color: #000080;
-}
-
-.note.is-warn {
-  background-color: #f0a0a0;
-  background-image: url('note-is-warn.png');
-  border: 2px solid #c04040;
-  color: #400000;
-}
-
-.menu.is-inline li {
-  display: inline;
-  padding: 0 1rem;
-}
-
-/* .socialmenu */
-
-.socialmenus.is-blog {
-  background-image: url('socialmenus_blog.png');
-}
-
-.socialmenus.is-twitter {
-  background-image: url('socialmenus_twitter.png');
-}
-
-.socialmenus.is-github {
-  background-image: url('socialmenus_github.png');
 }
 
 /* .font */
