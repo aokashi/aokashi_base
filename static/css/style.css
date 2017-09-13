@@ -118,16 +118,15 @@ img {
     text-align: center;
   }
 
-	.l-header-nav ul {
+  .l-header-nav ul {
     display: flex;
     flex-flow: row nowrap; /* トップページも、内部ページもメニューは折り返さない */
-		padding: 0;
-	}
+    padding: 0;
+  }
 
   .l-header-nav li {
     background-repeat: no-repeat;
     flex: 1 1 64px; /* 項目の最小幅は64px */
-    height: 72px;
     min-width: 64px;
   }
     
@@ -458,9 +457,10 @@ img {
 .is-page .l-header {
   border-bottom: 2px solid #000080;
 }
-
+  
   .is-page .l-header-nav ul {
     display: flex;
+    height: 72px;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;

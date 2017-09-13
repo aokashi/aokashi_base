@@ -2,6 +2,10 @@
 
 /* トップページ専用レイアウト */
 
+.l-header-nav ul {
+  height: 384px;
+}
+
 .l-header-nav li {
   background-position: center center;
 }
