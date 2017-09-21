@@ -11,10 +11,10 @@
           {{ if isset .Site.Params "github" }}<li class="socialmenus is-github"><a href="{{ .Site.Params.github }}">GitHub</a></li>{{ end }}
         </ul>
       </nav>
-      <nav class="l-header-nav">
+      <nav class="l-header-menu">
         <ul>
-          {{ if not .IsHome }}<li class="l-header-nav-home"><a href="{{ .Site.BaseURL }}" title="HOME">HOME</a></li>{{ end }}{{ range .Site.Menus.main }}
-          <li class="l-header-nav-{{ .Identifier }}"><a href="{{ .URL }}" title="{{ .Name }}">{{ upper .Identifier }}</a></li>{{ end }}
+          {{ if not .IsHome }}<li class="l-header-menu-home"><a href="{{ .Site.BaseURL }}" title="HOME">HOME</a></li>{{ end }}{{ range .Site.Menus.main }}
+          <li class="l-header-menu-{{ .Identifier }}"><a href="{{ .URL }}" title="{{ .Name }}">{{ upper .Identifier }}</a></li>{{ end }}
         </ul>
       </nav>
     </div>

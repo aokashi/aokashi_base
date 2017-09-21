@@ -116,72 +116,84 @@ img {
   border-bottom: 2px solid #000080;
 }
 
+  .l-header .l-wrap {
+    background-color: rgba(192, 192, 192, 0.5);
+  }
+
   .l-header-title {
     font-size: 2.2rem;
     text-align: center;
   }
 
-  .l-header-nav ul {
-    display: flex;
-    flex-flow: row nowrap; /* トップページも、内部ページもメニューは折り返さない */
-    padding: 0;
-  }
-  .is-page .l-header-nav ul {
-    display: flex;
-    height: 72px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
+  .l-header-socialmenu {
+    font-size: .8rem;
+    text-align: right;
   }
 
-  .l-header-nav li {
+  .l-header-socialmenu .socialmenus:hover {
+    background-color: #808080;
+  }
+
+  .l-header-menu ul {
+    display: flex;
+    flex-flow: row nowrap; /* トップページも、内部ページもメニューは折り返さない */
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0;
+    white-space: nowrap;
+  }
+  .is-page .l-header-menu ul {
+    height: 72px;
+  }
+
+  .l-header-menu li {
     background-repeat: no-repeat;
     flex: 1 1 64px; /* 項目の最小幅は64px */
     min-width: 64px;
   }
-  .is-page .l-header-nav li {
+  .is-page .l-header-menu li {
     background-position: center top;
   }
     
-    .l-header-nav li:hover {
+    .l-header-menu li:hover {
       background-color: #6060a0;
     }
     
-    .l-header-nav a {
+    .l-header-menu a {
       color: inherit;
       display: block;
       font-size: .8rem;
       font-weight: bold;
       margin: 0 auto;
+      text-align: center;
       text-decoration: none;
     }
-    .is-page .l-header-nav a {
+    .is-page .l-header-menu a {
       letter-spacing: -.1rem;
       padding-top: 50px; /* 50pxはアイコンの高さ48pxに余白2pxを加えた値 */
-      text-align: center;
     }
 
-    .l-header-nav-home {
+    .l-header-menu-home {
       background-image: url('header_menu_home.png');
     }
 
-    .l-header-nav-wwa {
+    .l-header-menu-wwa {
       background-image: url('header_menu_wwa.png');
     }
 
-    .l-header-nav-works {
+    .l-header-menu-works {
       background-image: url('header_menu_works.png');
     }
 
-    .l-header-nav-materials {
+    .l-header-menu-materials {
       background-image: url('header_menu_materials.png')
     }
 
-    .l-header-nav-docs {
+    .l-header-menu-docs {
       background-image: url('header_menu_docs.png');
     }
 
-    .l-header-nav-aboutme {
+    .l-header-menu-aboutme {
       background-image: url('header_menu_aboutme.png');
     }
 
@@ -590,9 +602,9 @@ img {
 
 /* タブレットモード */
 @media(min-width: 32rem){
-
+  
   /* ヘッダーメニューの左右に余白を入れる */
-  .is-page .l-header-nav ul {
+  .is-page .l-header-menu ul {
     padding: 0 64px;
   }
 
@@ -652,6 +664,33 @@ img {
     flex: 1 1 auto;
     padding: 0 1rem;
   }
+  
+  .is-page .l-header .l-wrap {
+    position: relative;
+  }
+
+  .l-header-title {
+    text-align: left;
+  }
+
+  .l-header-socialmenu {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+    .l-header-socialmenu .socialmenus {
+      background-repeat: no-repeat;
+      background-position: center 8px;
+      background-size: 32px 32px;
+      height: 64px;
+      text-align: center;
+      width: calc(32px + 2rem);
+    }
+
+    .l-header-socialmenu .socialmenus a {
+      padding: 40px 0 0 0;
+    }
 
 }
 

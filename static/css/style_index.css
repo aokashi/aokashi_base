@@ -2,17 +2,34 @@
 
 /* トップページ専用レイアウト */
 
-.l-header-nav ul {
+.l-header {
   height: 384px;
 }
 
-.l-header-nav li {
+.l-header .l-wrap {
+  position: relative;
+}
+
+.l-header-menu {
+  height: 384px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.l-header-menu ul {
+  height: 100%;
+}
+
+.l-header-menu li {
   background-position: center center;
 }
 
-.l-header-nav a {
-  font-size: 1.6rem;
-  padding: .8rem 0 .8rem 52px;
+.l-header-menu a {
+  font-size: 1.2rem;
+
 }
 
 .l-main-content .boxes {
