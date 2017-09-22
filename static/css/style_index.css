@@ -29,7 +29,10 @@
 
 .l-header-menu a {
   font-size: 1.2rem;
+}
 
+.l-header-menu-works {
+  background-image: url('header_bg_works.png');
 }
 
 .l-main-content .boxes {

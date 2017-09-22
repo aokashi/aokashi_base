@@ -181,7 +181,7 @@ img {
       background-image: url('header_menu_wwa.png');
     }
 
-    .l-header-menu-works {
+    .is-page.l-header-menu-works {
       background-image: url('header_menu_works.png');
     }
 
