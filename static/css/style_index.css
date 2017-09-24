@@ -2,7 +2,8 @@
 
 /* トップページ専用レイアウト */
 
-.l-header {
+.l-header,
+.l-header-menu {
   height: 384px;
 }
 
@@ -11,7 +12,6 @@
 }
 
 .l-header-menu {
-  height: 384px;
   left: 0;
   position: absolute;
   top: 0;
@@ -19,8 +19,13 @@
   z-index: -1;
 }
 
-.l-header-menu ul {
+.l-header-menu ul,
+.l-header-menu a {
   height: 100%;
+}
+
+.l-header-menu ul {
+  margin: 0;
 }
 
 .l-header-menu li {
