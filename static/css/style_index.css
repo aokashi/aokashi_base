@@ -6,13 +6,12 @@
   height: 384px;
 }
 
-.l-header-nav li {
-  background-position: center center;
+.l-header .l-wrap {
+  position: relative;
 }
 
-.l-header-nav a {
-  font-size: 1.6rem;
-  padding: .8rem 0 .8rem 52px;
+.l-header-title {
+  text-align: center;
 }
 
 .l-main-content .boxes {
