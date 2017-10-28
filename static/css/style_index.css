@@ -14,6 +14,20 @@
   text-align: center;
 }
 
+.l-main-menu .frontmenus {
+  padding: .5rem;
+}
+
+.l-main-menu .is-wrap {
+  border: 1px solid #404040;
+  border-radius: .25rem;
+  padding: .25rem;
+}
+
+.l-main-menu .frontmenus .frontmenus-nav {
+  background-image: linear-gradient(to bottom, gray, silver);
+}
+
 .l-main-content .boxes {
   background-color: #f0f0f0;
   border: 2px solid #808080;
