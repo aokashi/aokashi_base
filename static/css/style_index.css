@@ -2,6 +2,17 @@
 
 /* トップページ専用レイアウト */
 
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .l-header-nav ul {
   height: 384px;
 }
