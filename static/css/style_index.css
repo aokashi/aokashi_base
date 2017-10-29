@@ -17,26 +17,47 @@ body {
   height: 384px;
 }
 
-.l-header .l-wrap {
-  position: relative;
-}
-
 .l-header-title {
   text-align: center;
+}
+
+.l-main-menu .sub-container {
+  border: 2px solid #404040;
+  border-radius: .25rem;
+  height: 192px;
+  padding: .25rem;
 }
 
 .l-main-menu .frontmenus {
   padding: .5rem;
 }
 
-.l-main-menu .is-wrap {
-  border: 1px solid #404040;
-  border-radius: .25rem;
-  padding: .25rem;
+.l-main-menu .frontmenus-title {
+  bottom: 0;
+  font-size: 1.4rem;
+  margin: .5rem 0;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  width: 100%;
 }
 
-.l-main-menu .frontmenus .frontmenus-nav {
+.l-main-menu .frontmenus.has-submenu .frontmenus-title {
+  width: 50%;
+}
+
+.l-main-menu .frontmenus-nav {
   background-image: linear-gradient(to bottom, gray, silver);
+  padding: 1rem;
+}
+
+.l-main-menu .frontmenus-nav ul {
+  margin: 0;
+}
+
+.l-main-menu .frontmenus-nav a {
+  display: block;
+  padding: .5rem;
 }
 
 .l-main-content .boxes {

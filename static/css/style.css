@@ -522,12 +522,12 @@ img {
   flex-flow: row wrap;
 }
 
-.frontmenus {
-  flex: 0 0 25%;
+.frontmenu .sub-container {
+  position: relative;
 }
 
-.frontmenu .is-wrap {
-  position: relative;
+.frontmenus {
+  flex: 0 0 25%;
 }
 
 .frontmenus.has-submenu {
@@ -535,6 +535,7 @@ img {
 }
 
 .frontmenus-nav {
+  height: 100%;
   position: absolute;
   right: 0;
   top: 0;
