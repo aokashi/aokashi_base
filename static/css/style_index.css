@@ -21,15 +21,42 @@ body {
   text-align: center;
 }
 
-.l-main-menu .sub-container {
+.l-main-menu .frontmenus {
+  padding: .5rem;
+}
+
+.l-main-menu .frontmenus .sub-container {
+  background-repeat: no-repeat;
+  background-position: 50% 16px;
+  background-size: 128px 128px;
   border: 2px solid #404040;
   border-radius: .25rem;
   height: 192px;
   padding: .25rem;
 }
 
-.l-main-menu .frontmenus {
-  padding: .5rem;
+.l-main-menu .frontmenus.has-submenu .sub-container {
+  background-position-x: 12.5%;
+}
+
+.l-main-menu-playing .sub-container {
+  background: #ffc0c0 url('playing.png');
+}
+
+.l-main-menu-making .sub-container {
+  background: #a0e0e0 url('making.png');
+}
+
+.l-main-menu-about .sub-container {
+  background: #c0ffc0;
+}
+
+.l-main-menu-twitter .sub-container {
+  background: #c0c0ff url('twitter.png');
+}
+
+.l-main-menu-blog .sub-container {
+  background: #e0e0a0 url('blog.png');
 }
 
 .l-main-menu .frontmenus-title {
@@ -47,12 +74,17 @@ body {
 }
 
 .l-main-menu .frontmenus-nav {
-  background-image: linear-gradient(to bottom, gray, silver);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .25), transparent 75%);
   padding: 1rem;
 }
 
 .l-main-menu .frontmenus-nav ul {
   margin: 0;
+}
+
+.l-main-menu .frontmenus-nav li {
+  background-color: #e0e0e0;
+  margin: .5rem 0;
 }
 
 .l-main-menu .frontmenus-nav a {
