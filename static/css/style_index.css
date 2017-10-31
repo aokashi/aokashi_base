@@ -48,11 +48,15 @@ body {
 }
 
 .l-main-menu-about .sub-container {
-  background: #c0ffc0;
+  background: #c0ffc0 url('about.png');
 }
 
 .l-main-menu-twitter .sub-container {
   background: #c0c0ff url('twitter.png');
+}
+
+.l-main-menu-github .sub-container {
+  background: #d0d0d0 url('github.png');
 }
 
 .l-main-menu-blog .sub-container {
@@ -83,8 +87,12 @@ body {
 }
 
 .l-main-menu .frontmenus-nav li {
-  background-color: #e0e0e0;
+  background-color: transparent;
   margin: .5rem 0;
+}
+
+.l-main-menu .frontmenus-nav li:hover {
+  background-color: #e0e0e0;
 }
 
 .l-main-menu .frontmenus-nav a {
