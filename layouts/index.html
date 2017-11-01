@@ -7,19 +7,7 @@
     <div class="l-wrap is-center">
       <h1 class="l-header-title">
         <img src="{{ .Site.BaseURL }}img/aokashihome_logo.png" alt="{{ .Site.Title }}">
-      </h1><!--
-      <nav class="l-header-socialmenu socialmenu">
-        <ul>
-          {{ if isset .Site.Params "blog" }}<li class="socialmenus is-blog"><a href="{{ .Site.Params.blog }}">Blog</a></li>{{ end }}
-          {{ if isset .Site.Params "twitter" }}<li class="socialmenus is-twitter"><a href="{{ .Site.Params.twitter }}">Twitter</a></li>{{ end }}
-          {{ if isset .Site.Params "github" }}<li class="socialmenus is-github"><a href="{{ .Site.Params.github }}">GitHub</a></li>{{ end }}
-        </ul>
-      </nav>
-      <nav class="l-header-menu">
-        <ul>{{ range .Site.Menus.main }}
-          <li class="l-header-nav-{{ .Identifier }}"><a href="{{ .URL }}" title="{{ .Name }}">{{ upper .Identifier }}</a></li>{{ end }}
-        </ul>
-      </nav>-->
+      </h1>
     </div>
   </header>
 {{ end }}
@@ -27,61 +15,19 @@
 {{ define "main" }}
   <main class="l-main">
     <div class="l-wrap is-center">
-      <nav class="l-main-menu frontmenu">
-        <section class="l-main-menu-playing frontmenus has-submenu">
+      <nav class="l-main-menu frontmenu">{{ range .Site.Menus.top }}
+        <section class="l-main-menu-{{ .Identifier }} frontmenus{{ if .HasChildren }} has-submenu{{ end }}">
           <div class="sub-container">
-            <a href="./playing/" class="frontmenus-link">
-              <h2 class="frontmenus-title">Playing</h2>
-            </a>
-            <nav class="frontmenus-nav">
-              <ul>
-                <li><a href="#">WWA</a></li>
-                <li><a href="#">Docs</a></li>
+            <a href="{{ .URL }}" class="frontmenus-link" title="{{ .Name }}">
+              <h2 class="frontmenus-title">{{ .Name }}</h2>
+            </a>{{ if .HasChildren }}<nav class="frontmenus-nav">
+              <ul>{{ range .Children }}
+                <li><a href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a></li>{{ end }}
               </ul>
             </nav>
+            {{ end }}
           </div>
-        </section>
-        <section class="l-main-menu-making frontmenus has-submenu">
-          <div class="sub-container">
-            <a href="./making/" class="frontmenus-link">
-              <h2 class="frontmenus-title">Making</h2>
-            </a>
-            <nav class="frontmenus-nav">
-              <ul>
-                <li><a href="#">Program</a></li>
-                <li><a href="#">Materials</a></li>
-              </ul>
-            </nav>
-          </div>
-        </section>
-        <section class="l-main-menu-about frontmenus">
-          <div class="sub-container">
-            <a href="./about/" class="frontmenus-link">
-              <h2 class="frontmenus-title">About</h2>
-            </a>
-          </div>
-        </section>
-        <section class="l-main-menu-twitter frontmenus">
-          <div class="sub-container">
-            <a href="#" class="frontmenus-link">
-              <h2 class="frontmenus-title">Twitter</h2>
-            </a>
-          </div>
-        </section>
-        <section class="l-main-menu-github frontmenus">
-          <div class="sub-container">
-            <a href="#" class="frontmenus-link">
-              <h2 class="frontmenus-title">GitHub</h2>
-            </a>
-          </div>
-        </section>
-        <section class="l-main-menu-blog frontmenus">
-          <div class="sub-container">
-            <a href="#" class="frontmenus-link">
-              <h2 class="frontmenus-title">Blog</h2>
-            </a>
-          </div>
-        </section>
+        </section>{{ end }}
       </nav>
       <div class="l-main-content l-doc">
 
