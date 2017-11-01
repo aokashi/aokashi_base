@@ -63,6 +63,11 @@ body {
   background: #e0e0a0 url('blog.png');
 }
 
+.l-main-menu .frontmenus-link {
+  display: block;
+  height: 100%;
+}
+
 .l-main-menu .frontmenus-title {
   bottom: 0;
   font-size: 1.4rem;
