@@ -16,9 +16,7 @@ HTML5の規則に沿ってHTMLタグを構成しています。
 
 MIT License. (詳細はLICENSEファイルを参照のこと。)
 
-# developブランチ向け
-
-## AngularでWWAのリストを表示する
+# AngularでWWAのリストを表示する
 - AngularJS v1.6.4
 - js(1つ目)はwwalist.jsで、サイトの `/static/js/` ディレクトリに保存
 - HTML(2つ目)は適当なmarkdownファイルに追加して保存
