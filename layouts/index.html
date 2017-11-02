@@ -6,8 +6,9 @@
   <header class="l-header">
     <div class="l-wrap is-center">
       <h1 class="l-header-title">
-        <img src="{{ .Site.BaseURL }}img/header_title.png" alt="{{ .Site.Title }}">
+        <img class="l-header-title-img" src="{{ .Site.BaseURL }}img/aokashihome_logo.png" alt="{{ .Site.Title }}">
       </h1>
+<<<<<<< HEAD
       <nav class="l-header-socialmenu socialmenu">
         <ul>
           {{ if isset .Site.Params "blog" }}<li class="socialmenus is-blog"><a href="{{ .Site.Params.blog }}">Blog</a></li>{{ end }}
@@ -20,6 +21,8 @@
           <li class="l-header-menu-{{ .Identifier }}"><a href="{{ .URL }}" title="{{ .Name }}">{{ upper .Identifier }}</a></li>{{ end }}
         </ul>
       </nav>
+=======
+>>>>>>> develop
     </div>
   </header>
 {{ end }}
@@ -27,6 +30,20 @@
 {{ define "main" }}
   <main class="l-main">
     <div class="l-wrap is-center">
+      <nav class="l-main-menu frontmenu">{{ range .Site.Menus.top }}
+        <section class="l-main-menu-{{ .Identifier }} frontmenus{{ if .HasChildren }} has-submenu{{ end }}">
+          <div class="sub-container">
+            <a href="{{ .URL }}" class="frontmenus-link" title="{{ .Name }}">
+              <h2 class="frontmenus-title">{{ .Name }}</h2>
+            </a>{{ if .HasChildren }}<nav class="frontmenus-nav">
+              <ul>{{ range .Children }}
+                <li><a href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a></li>{{ end }}
+              </ul>
+            </nav>
+            {{ end }}
+          </div>
+        </section>{{ end }}
+      </nav>
       <div class="l-main-content l-doc">
 
 {{ partial "index_content.html" . }}

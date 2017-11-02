@@ -18,7 +18,7 @@ img {
 }
 
 .l-wrap {
-  margin: 0 1rem;
+  margin: 0;
 }
 
 .l-nav ul {
@@ -123,7 +123,11 @@ img {
   .l-header-title {
     font-size: 2.2rem;
     margin: 0;
+<<<<<<< HEAD
     padding: 1rem 0;
+=======
+    padding: 1rem;
+>>>>>>> develop
     text-align: center;
   }
 
@@ -479,10 +483,11 @@ img {
   background-color: #808080;
 }
 
-/* .menu, .socialmenu */
+/* .menu, .socialmenu, .frontmenu */
 
 .menu > ul,
-.socialmenu > ul {
+.socialmenu > ul,
+.frontmenus-nav > ul {
   padding: 0;
 }
 
@@ -492,13 +497,15 @@ img {
 }
 
 .menu a,
-.socialmenu a {
+.socialmenu a,
+.frontmenu a {
   color: inherit;
   text-decoration: none;
 }
 
 .menu a:hover,
-.socialmenu a:hover {
+.socialmenu a:hover,
+.frontmenu a:hover {
   text-decoration: underline;
 }
 
@@ -524,6 +531,33 @@ img {
 .socialmenus a {
   display: inline-block;
   padding: .25em .25em .25em 32px; /* 32pxはアイコンの24pxに余白分8pxを足した値 */
+}
+
+/* .frontmenu */
+
+.frontmenu {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.frontmenu .sub-container {
+  position: relative;
+}
+
+.frontmenus {
+  flex: 0 0 50%;
+}
+
+.frontmenus.has-submenu {
+  flex-basis: 100%;
+}
+
+.frontmenus-nav {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
 }
 
 /* .font */
@@ -693,6 +727,14 @@ img {
     .l-header-socialmenu .socialmenus a {
       padding: 40px 0 0 0;
     }
+
+  .frontmenus {
+    flex: 0 0 25%;
+  }
+
+  .frontmenus.has-submenu {
+    flex-basis: 50%;
+  }
 
 }
 
