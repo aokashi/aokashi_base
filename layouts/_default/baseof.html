@@ -6,12 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   {{ .Hugo.Generator }}
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/sanitize.css">
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">{{ with .Params.angular_js }}
+  <script src="/js/angular.min.js"></script>
+  <script src="/js/{{ . }}.js"></script>{{ end }}
   <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
   {{ block "head" . }}
   {{ end }}
 </head>
-<body class="{{ if .IsHome }}is-index{{ else }}is-page{{ end }}">
+<body class="{{ if .IsHome }}is-index{{ else }}is-page{{ end }}"{{ with .Params.angular_js }} ng-controller="{{ . }}Controller"{{ end }}>
 {{ block "header" . }}
 {{ partial "header.html" . }}
 {{ end }}
