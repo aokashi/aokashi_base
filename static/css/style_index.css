@@ -2,44 +2,6 @@
 
 /* トップページ専用レイアウト */
 
-<<<<<<< HEAD
-.l-header,
-.l-header-menu {
-  height: 384px;
-}
-
-.l-header .l-wrap {
-  position: relative;
-}
-
-.l-header-menu {
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-}
-
-.l-header-menu ul,
-.l-header-menu a {
-  height: 100%;
-}
-
-.l-header-menu ul {
-  margin: 0;
-}
-
-.l-header-menu li {
-  background-position: center center;
-}
-
-.l-header-menu a {
-  font-size: 1.2rem;
-}
-
-.l-header-menu-works {
-  background-image: url('header_bg_works.png');
-=======
 html,
 body {
   min-height: 100vh;
@@ -202,7 +164,6 @@ body {
 
 .l-main-topic .linkbutton a:hover {
   background-color: #c0c0c0;
->>>>>>> develop
 }
 
 .l-main-content .boxes {

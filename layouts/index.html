@@ -8,21 +8,6 @@
       <h1 class="l-header-title">
         <img class="l-header-title-img" src="{{ .Site.BaseURL }}img/aokashihome_logo.png" alt="{{ .Site.Title }}">
       </h1>
-<<<<<<< HEAD
-      <nav class="l-header-socialmenu socialmenu">
-        <ul>
-          {{ if isset .Site.Params "blog" }}<li class="socialmenus is-blog"><a href="{{ .Site.Params.blog }}">Blog</a></li>{{ end }}
-          {{ if isset .Site.Params "twitter" }}<li class="socialmenus is-twitter"><a href="{{ .Site.Params.twitter }}">Twitter</a></li>{{ end }}
-          {{ if isset .Site.Params "github" }}<li class="socialmenus is-github"><a href="{{ .Site.Params.github }}">GitHub</a></li>{{ end }}
-        </ul>
-      </nav>
-      <nav class="l-header-menu">
-        <ul>{{ range .Site.Menus.main }}
-          <li class="l-header-menu-{{ .Identifier }}"><a href="{{ .URL }}" title="{{ .Name }}">{{ upper .Identifier }}</a></li>{{ end }}
-        </ul>
-      </nav>
-=======
->>>>>>> develop
     </div>
   </header>
 {{ end }}
