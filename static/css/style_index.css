@@ -105,6 +105,49 @@ body {
   padding: .5rem;
 }
 
+.l-main-topic {
+  border: 1px solid #808080;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  margin: .5rem;
+}
+
+.l-main-topic .topic-title {
+  background-color: #e0e0e0;
+  border-radius: 1rem 0 0 1rem;
+  width: 96px;
+}
+
+.l-main-topic .topic-title-text {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.l-main-topic .topic-content {
+  padding: 0 1rem;
+}
+
+.l-main-topic .topic-list {
+  list-style: none;
+  padding: 0;
+}
+
+.l-main-topic .topic-list li:first-child {
+  font-size: 1.4rem;
+}
+
+.l-main-topic .linkbutton {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.l-main-topic .linkbutton a {
+  background-color: #e0e0e0;
+  border: 0;
+}
+
 .l-main-content .boxes {
   background-color: #f0f0f0;
   border: 2px solid #808080;
