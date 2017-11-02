@@ -1,26 +1,26 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
 
-    <main class="l-main">
-      <div class="l-wrap">
-        <div class="l-main-content">
-          <section class="l-main-contents">
-            <header class="l-main-contents-header block">
-              <h2 class="l-main-contents-header-title">{{ .Title }}</h2>
-            </header>
-            <article class="l-main-contents-article l-doc">
-              <div class="box is-cols-2">{{ range .Data.Pages }}{{ $date := .Date.Format "2006-01-02" }}{{ if ne $date "0001-01-01" }}
-                <section class="boxes">
-                  <h6 class="boxes-title"><a href="{{ if eq .File.BaseFileName "index" }}{{ replace .URL ".html" "/" }}{{ else }}{{ .URL }}{{ end }}" title="{{ .Title }}">{{ .Title }}</a></h6>
-                  <ul>
-                    <li>{{ .Date.Format "2006年 01月 02日" }}</li>
-                  </ul>
-                  <p>{{ .Summary }}</p>
-                </section>{{ end }}{{ end }}
-              </div>
-            </article>
-          </section>
-        </div>
+  <main class="l-main">
+    <div class="l-wrap">
+      <div class="l-main-content">
+        <section class="l-main-contents">
+          <header class="l-main-contents-header block">
+            <h2 class="l-main-contents-header-title">{{ .Title }}</h2>
+          </header>
+          <article class="l-main-contents-article l-doc">
+            <div class="box is-cols-2">{{ range .Data.Pages }}{{ $date := .Date.Format "2006-01-02" }}{{ if ne $date "0001-01-01" }}
+              <section class="boxes">
+                <h6 class="boxes-title"><a href="{{ if eq .File.BaseFileName "index" }}{{ replace .URL ".html" "/" }}{{ else }}{{ .URL }}{{ end }}" title="{{ .Title }}">{{ .Title }}</a></h6>
+                <ul>
+                  <li>{{ .Date.Format "2006年 01月 02日" }}</li>
+                </ul>
+                <p>{{ .Summary }}</p>
+              </section>{{ end }}{{ end }}
+            </div>
+          </article>
+        </section>
       </div>
-    </main>
+    </div>
+  </main>
 
-{{ partial "footer.html" . }}
+{{ end }}

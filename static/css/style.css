@@ -18,7 +18,7 @@ img {
 }
 
 .l-wrap {
-  margin: 0 1rem;
+  margin: 0;
 }
 
 .l-nav ul {
@@ -112,20 +112,37 @@ img {
 .l-header {
   color: #000080;
 }
+.is-page .l-header {
+  border-bottom: 2px solid #000080;
+}
 
   .l-header-title {
     font-size: 2.2rem;
+    margin: 0;
+    padding: 1rem;
     text-align: center;
   }
 
-	.l-header-nav ul {
-		padding: 0;
-	}
+  .l-header-nav ul {
+    display: flex;
+    flex-flow: row nowrap; /* トップページも、内部ページもメニューは折り返さない */
+    padding: 0;
+  }
+  .is-page .l-header-nav ul {
+    display: flex;
+    height: 72px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
 
   .l-header-nav li {
     background-repeat: no-repeat;
-    /* アイコンの配置及び幅はステートルール参照のこと */
-    height: 72px;
+    flex: 1 1 64px; /* 項目の最小幅は64px */
+    min-width: 64px;
+  }
+  .is-page .l-header-nav li {
+    background-position: center top;
   }
     
     .l-header-nav li:hover {
@@ -139,6 +156,11 @@ img {
       font-weight: bold;
       margin: 0 auto;
       text-decoration: none;
+    }
+    .is-page .l-header-nav a {
+      letter-spacing: -.1rem;
+      padding-top: 50px; /* 50pxはアイコンの高さ48pxに余白2pxを加えた値 */
+      text-align: center;
     }
 
     .l-header-nav-home {
@@ -166,6 +188,15 @@ img {
     }
 
 /* .l-main */
+
+.is-page .l-main {
+  background: #fff url('main_background.png') repeat 0 0;
+  color: #404040;
+}
+
+  .is-page .l-main-content {
+    padding: 1rem .5rem;
+  }
 
   .l-main-contents-header,
   .l-main-contents h3,
@@ -253,6 +284,9 @@ img {
 
 .l-footer {
   font-size: .8rem;
+}
+.is-page .l-footer {
+  border-top: 2px solid #000080;
 }
 
   .l-footer-menu,
@@ -348,6 +382,10 @@ img {
   flex-flow: column wrap;
 }
 
+  .intros.is-icon {
+    margin: 0 auto;
+  }
+
   .intros-title {
     margin: 0 -.5rem 0 -.5rem;
   }
@@ -385,6 +423,24 @@ img {
   min-height: 64px; /* 64pxは48pxに余白分8pxを2つ足した値 */
   padding: .5rem .5rem .5rem 64px;
 }
+.note.is-notice {
+  background-color: #e0e080;
+  background-image: url('note-is-notice.png');
+  border: 2px solid #808000;
+  color: #404000;
+}
+.note.is-info {
+  background-color: #80e0e0;
+  background-image: url('note-is-info.png');
+  border: 2px solid #004080;
+  color: #000080;
+}
+.note.is-warn {
+  background-color: #f0a0a0;
+  background-image: url('note-is-warn.png');
+  border: 2px solid #c04040;
+  color: #400000;
+}
 
 /* .linkbutton */
 
@@ -411,21 +467,29 @@ img {
   background-color: #808080;
 }
 
-/* .menu, .socialmenu */
+/* .menu, .socialmenu, .frontmenu */
 
 .menu > ul,
-.socialmenu > ul {
+.socialmenu > ul,
+.frontmenus-nav > ul {
   padding: 0;
 }
 
+.menu.is-inline li {
+  display: inline;
+  padding: 0 1rem;
+}
+
 .menu a,
-.socialmenu a {
+.socialmenu a,
+.frontmenu a {
   color: inherit;
   text-decoration: none;
 }
 
 .menu a:hover,
-.socialmenu a:hover {
+.socialmenu a:hover,
+.frontmenu a:hover {
   text-decoration: underline;
 }
 
@@ -438,129 +502,46 @@ img {
   background-size: 24px 24px;
   display: inline-block;
 }
+.socialmenus.is-blog {
+  background-image: url('socialmenus_blog.png');
+}
+.socialmenus.is-twitter {
+  background-image: url('socialmenus_twitter.png');
+}
+.socialmenus.is-github {
+  background-image: url('socialmenus_github.png');
+}
 
 .socialmenus a {
   display: inline-block;
   padding: .25em .25em .25em 32px; /* 32pxはアイコンの24pxに余白分8pxを足した値 */
 }
 
-/*
- * ----------
- * State Rule
- * ----------
- */
+/* .frontmenu */
 
-/* .is-page */
-
-.is-page .l-header {
-  border-bottom: 2px solid #000080;
+.frontmenu {
+  display: flex;
+  flex-flow: row wrap;
 }
 
-  .is-page .l-header-nav ul {
-    display: flex;
-    flex-flow: row nowrap; /* 記事ページのメニューは1行にすべての項目が表示される */
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-  }
-
-  .is-page .l-header-nav li {
-    background-position: center top;
-    flex: 1 1 64px; /* 項目の最小幅は64px */
-    min-width: 64px;
-  }
-
-  .is-page .l-header-nav a {
-    letter-spacing: -.1rem;
-    padding-top: 50px; /* 50pxはアイコンの高さ48pxに余白2pxを加えた値 */
-    text-align: center;
-  }
-
-.is-page .l-main {
-  background: #fff url('main_background.png') repeat 0 0;
-  color: #404040;
+.frontmenu .sub-container {
+  position: relative;
 }
 
-  .is-page .l-main-content {
-    padding: 1rem .5rem;
-  }
-
-.is-page .l-footer {
-  border-top: 2px solid #000080;
+.frontmenus {
+  flex: 0 0 50%;
 }
 
-/* .is-index */
-
-  .is-index .l-header-nav ul {
-    display: flex;
-    flex-flow: row wrap; /* トップページのメニューは1行に2項目表示される、複数行表示*/
-  }
-
-  .is-index .l-header-nav li {
-    background-position: left center;
-    flex: 0 0 100%;
-  }
-
-  .is-index .l-header-nav a {
-    font-size: 1.6rem;
-    padding: .8rem 0 .8rem 52px;
-  }
-
-  .is-index .l-main-content .boxes {
-    background-color: #f0f0f0;
-    border: 2px solid #808080;
-  }
-
-  .is-index .l-main-content .boxes-title {
-    background-color: #c0c0c0;
-    border-bottom: 2px solid #808080;
-    font-size: 1.4rem;
-  }
-
-/* for module rule */
-
-.intros.is-icon {
-  margin: 0 auto;
+.frontmenus.has-submenu {
+  flex-basis: 100%;
 }
 
-.note.is-notice {
-  background-color: #e0e080;
-  background-image: url('note-is-notice.png');
-  border: 2px solid #808000;
-  color: #404000;
-}
-
-.note.is-info {
-  background-color: #80e0e0;
-  background-image: url('note-is-info.png');
-  border: 2px solid #004080;
-  color: #000080;
-}
-
-.note.is-warn {
-  background-color: #f0a0a0;
-  background-image: url('note-is-warn.png');
-  border: 2px solid #c04040;
-  color: #400000;
-}
-
-.menu.is-inline li {
-  display: inline;
-  padding: 0 1rem;
-}
-
-/* .socialmenu */
-
-.socialmenus.is-blog {
-  background-image: url('socialmenus_blog.png');
-}
-
-.socialmenus.is-twitter {
-  background-image: url('socialmenus_twitter.png');
-}
-
-.socialmenus.is-github {
-  background-image: url('socialmenus_github.png');
+.frontmenus-nav {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
 }
 
 /* .font */
@@ -647,10 +628,6 @@ img {
     padding: 0 64px;
   }
 
-  .is-index .l-header-nav li {
-    flex: 0 0 50%;
-  }
-
   .is-page .l-main-content {
     padding: 1rem;
   }
@@ -706,6 +683,14 @@ img {
   .intros.is-description {
     flex: 1 1 auto;
     padding: 0 1rem;
+  }
+
+  .frontmenus {
+    flex: 0 0 25%;
+  }
+
+  .frontmenus.has-submenu {
+    flex-basis: 50%;
   }
 
 }
