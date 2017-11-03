@@ -1,13 +1,14 @@
   <header class="l-header">
     <div class="l-wrap is-center">
       <h1 class="l-header-title">
-        {{ if .IsHome }}<img src="{{ .Site.BaseURL }}img/header_title.png" alt="{{ .Site.Title }}">
-      {{ else }}<a href="{{ .Site.BaseURL }}" title="Aokashi Home"><img src="{{ .Site.BaseURL }}img/header_title.png" alt="{{ .Site.Title }}"></a>
-      {{ end }}</h1>
-      <nav class="l-header-nav">
-        <ul>
-          {{ if not .IsHome }}<li class="l-header-nav-home"><a href="{{ .Site.BaseURL }}" title="HOME">HOME</a></li>{{ end }}{{ range .Site.Menus.main }}
-          <li class="l-header-nav-{{ .Identifier }}"><a href="{{ .URL }}" title="{{ .Name }}">{{ upper .Identifier }}</a></li>{{ end }}
+        <a href="{{ .Site.BaseURL }}" title="Aokashi Home"><img src="{{ .Site.BaseURL }}img/aokashihome_logo_mini.png" alt="{{ .Site.Title }}"></a>
+      </h1>
+      <nav class="l-header-menu menu">
+        <ul>{{ range .Site.Menus.main }}
+          <li class="menus l-header-menu-{{ .Identifier }}"><a href="{{ .URL }}" title="{{ .Name }}">{{ upper .Identifier }}</a></li>{{ end }}
+          {{ if isset .Site.Params "blog" }}<li class="menus is-blog"><a href="{{ .Site.Params.blog }}">Blog</a></li>{{ end }}
+          {{ if isset .Site.Params "twitter" }}<li class="menus is-twitter"><a href="{{ .Site.Params.twitter }}">Twitter</a></li>{{ end }}
+          {{ if isset .Site.Params "github" }}<li class="menus is-github"><a href="{{ .Site.Params.github }}">GitHub</a></li>{{ end }}
         </ul>
       </nav>
     </div>

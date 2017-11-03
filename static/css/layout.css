@@ -1,0 +1,417 @@
+@charset "utf-8";
+
+/*
+ * -----------
+ * Layout Rule
+ * -----------
+ */
+
+body {
+  background-color: #c0c0c0;
+  color: #000;
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "sans-serif";
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.l-wrap {
+  margin: 0;
+}
+
+.l-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* .l-doc */
+
+.l-doc a:link {
+  color: #008080;
+}
+
+.l-doc a:visited {
+  color: #800080;
+}
+
+.l-doc blockquote {
+  background-color: #e0e0e0;
+  padding: 1rem;
+}
+
+.l-doc code {
+  background-color: #e0e0e0;
+}
+
+.l-doc h3,
+.l-doc h4,
+.l-doc h5,
+.l-doc h6 {
+  color: #000080;
+}
+
+.l-doc h3 {
+  background: #c0c0c0 url('heading_mark.png') no-repeat 8px center;
+  border: 6px double #000080; /* 6pxは2重線になる3pxを2倍にした値 */
+  font-size: 1.4rem;
+  padding: .5rem .5rem .5rem 48px; /* 48pxは見出しの印の幅32pxと余白の16pxを足した値 */
+}
+
+.l-doc h4 {
+  border-bottom: 2px solid #000080;
+  font-size: 1.4rem;
+  padding: .5rem;
+}
+
+.l-doc h5 {
+  border-left: 1rem solid #000080;
+  font-size: 1rem;
+  padding: .5rem;
+}
+
+.l-doc h6 {
+  font-size: 1rem;
+  padding: .5rem;
+}
+
+.l-doc ol,
+.l-doc ul {
+  padding-left: 1.5rem;
+}
+
+.l-doc p {
+  text-indent: 1rem;
+}
+
+.l-doc pre {
+  background-color: #e0e0e0;
+  border: 1px solid #808080;
+  padding: .25rem;
+}
+
+.l-doc table {
+  border: 1px solid #808080;
+  border-collapse: separate;
+  border-spacing: 1px;
+}
+
+.l-doc td,
+.l-doc th {
+  border: 1px solid #808080;
+  padding: .25rem;
+}
+
+.l-doc th {
+  background-color: #e0e0e0;
+}
+
+/* .l-header */
+
+.l-header {
+  color: #000080;
+}
+.is-page .l-header {
+  border-bottom: 2px solid #000080;
+}
+
+  .l-header .l-wrap {
+    background-color: rgba(192, 192, 192, 0.5);
+  }
+
+  .l-header-title {
+    font-size: 1.8rem;
+    margin: 0;
+    text-align: center;
+  }
+  .is-page .l-header-title {
+    height: 48px;
+    margin: 1rem 0;
+  }
+
+  .l-header-menu {
+    overflow-x: auto;
+    overflow-y: hidden;
+    text-align: center;
+  }
+
+  .l-header-menu > ul {
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    margin: 0;
+  }
+
+  .l-header-menu .menus:hover {
+    background-color: #808080;
+  }
+
+    .l-header-menu .menus a {
+      display: block;
+      padding: 1rem;
+    }
+
+/* .l-main */
+
+.is-page .l-main {
+  background: #fff url('main_background.png') repeat 0 0;
+  color: #404040;
+}
+
+  .is-page .l-main-content {
+    padding: 1rem .5rem;
+  }
+
+  .l-main-contents-header,
+  .l-main-contents h3,
+  .l-main-contents h4,
+  .l-main-contents h5 {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+  .l-main-contents-header {
+    background-color: #c0c0c0;
+  }
+
+    .l-main-contents-header-title {
+      color: #000080;
+      font-size: 1.8rem;
+      margin: 0;
+      padding: 1rem;
+    }
+
+      .l-main-contents-header-title a {
+        display: block;
+        text-decoration: none;
+      }
+
+      .l-main-contents-header-title a:hover {
+        text-decoration: underline;
+      }
+
+    .l-main-contents-header .blocks {
+      background-color: #a0a0a0;
+      color: #000080;
+    }
+
+  .l-main-nav {
+    background-color: #60a0ff;
+    padding: 1rem;
+  }
+
+    .l-main-nav ul {
+      margin: 0;
+    }
+
+    .l-main-nav .menus {
+      background-color: #c0c0c0;
+      margin-bottom: .5rem;
+    }
+
+    .l-main-nav .menus.is-top {
+      font-weight: bold;
+    }
+
+    .l-main-nav a {
+      color: inherit;
+      display: block;
+      padding: .5rem;
+      text-decoration: none;
+    }
+
+  .l-main-toc {
+    padding: 1rem;
+  }
+
+    .l-main-toc-title {
+      border-bottom: 1px solid #808080;
+      font-size: 1rem;
+      padding: .5rem;
+    }
+
+    .l-main-toc ul {
+      padding-left: 1rem;
+    }
+
+    .l-main-toc > nav > ul,
+    .l-main-toc > nav > ul > li > ul {
+      padding: 0; /* Hugoの仕様上、このような記述に... */
+    }
+
+    .l-main-toc li {
+      line-height: 1.25;
+      margin: .5rem 0;
+    }
+
+/* .l-footer */
+
+.l-footer {
+  font-size: .8rem;
+}
+.is-page .l-footer {
+  border-top: 2px solid #000080;
+}
+
+  .l-footer-menu,
+  .l-footer-socialmenu {
+    text-align: center;
+  }
+
+  .l-footer-menu > ul,
+  .l-footer-socialmenu > ul {
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+  .l-footer-menu li {
+    border-right: 1px solid #404040;
+  }
+
+  .l-footer-menu li:first-child {
+    border-left: 1px solid #404040;
+  }
+
+  .l-footer-copyright {
+    text-align: center;
+  }
+
+  .l-footer-socialmenu .socialmenus:hover {
+    background-color: #808080;
+  }
+
+/*
+ * -----------
+ * Media Query
+ * -----------
+ */
+
+/* タブレットモード */
+@media(min-width: 32rem){
+
+  .is-page .l-main-content {
+    padding: 1rem;
+  }
+
+  /* サブメニューはタブレットモードになると1行に2項目が表示される */
+  .l-main-nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+    .l-main-nav .menus {
+      flex: 0 0 calc(50% - .5rem);
+    }
+
+    .l-main-nav .menus.is-top {
+      flex: 0 0 100%;
+    }
+
+  .box.is-cols-1 .boxes {
+    flex: 0 0 100%;
+  }
+
+  /* ボックスの分割はタブレットモード以降で有効 */
+  .box.is-cols-2 .boxes {
+    flex: 0 0 calc(50% - .5rem);
+  }
+
+  .box.is-cols-3 .boxes {
+    flex: 0 0 calc((100% / 3) - .5rem);
+  }
+
+}
+
+/* デスクトップPCモード */
+@media(min-width: 50rem){
+
+  .l-wrap {
+    margin: 0 auto;
+    width: 47rem; /* 47 = 50 - (1 * 2 + 1) ... 余白分2remとスクロールバーのスペース確保分1rem */
+  }
+
+  /* 説明ボックスの分割はデスクトップPCモード以降で有効 */
+
+  .intro {
+    flex-flow: row nowrap;
+  }
+
+  .intros.is-icon {
+    flex: 0 0 auto;
+  }
+
+  .intros.is-description {
+    flex: 1 1 auto;
+    padding: 0 1rem;
+  }
+
+  .frontmenus {
+    flex: 0 0 25%;
+  }
+
+  .frontmenus.has-submenu {
+    flex-basis: 50%;
+  }
+
+}
+
+@media(min-width: 78rem){ /* 78 = 50 + 14 * 2 */
+
+  .is-page .l-header .l-wrap {
+    position: relative;
+  }
+
+    .l-header-title {
+      text-align: left;
+    }
+
+    .l-header-menu {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+      .l-header-menu .menus a {
+        padding: 1rem .5rem;
+      }
+
+  .is-page .l-main {
+    align-items: stretch;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+
+    .l-main .l-wrap.is-left {
+      display: flex; /* Safariでメニューを縦いっぱいに表示する */
+      flex: 1 0 14rem;
+      flex-flow: row wrap; /* 万が一のために余計な要素は下に逃す */
+      order: 1;
+    }
+
+    .l-main .l-wrap.is-center {
+      flex: 0 0 47rem;
+      order: 2;
+    }
+
+    .l-main .l-wrap.is-right {
+      flex: 1 0 14rem;
+      order: 3;
+    }
+
+  .l-main-toc {
+    width: 14rem;
+  }
+
+  .l-main-nav { /* display: flex; と指定した .l-wrap.is-left の子要素 */
+    flex: 0 0 14rem;
+  }
+
+  .l-main-nav .menus {
+    flex: 0 0 100%;
+  }
+
+}
