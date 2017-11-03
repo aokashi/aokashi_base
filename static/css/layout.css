@@ -17,94 +17,8 @@ img {
   max-width: 100%;
 }
 
-.l-wrap {
+.sub-wrap {
   margin: 0;
-}
-
-.l-nav ul {
-  margin: 0;
-  padding: 0;
-}
-
-/* .l-doc */
-
-.l-doc a:link {
-  color: #008080;
-}
-
-.l-doc a:visited {
-  color: #800080;
-}
-
-.l-doc blockquote {
-  background-color: #e0e0e0;
-  padding: 1rem;
-}
-
-.l-doc code {
-  background-color: #e0e0e0;
-}
-
-.l-doc h3,
-.l-doc h4,
-.l-doc h5,
-.l-doc h6 {
-  color: #000080;
-}
-
-.l-doc h3 {
-  background: #c0c0c0 url('heading_mark.png') no-repeat 8px center;
-  border: 6px double #000080; /* 6pxは2重線になる3pxを2倍にした値 */
-  font-size: 1.4rem;
-  padding: .5rem .5rem .5rem 48px; /* 48pxは見出しの印の幅32pxと余白の16pxを足した値 */
-}
-
-.l-doc h4 {
-  border-bottom: 2px solid #000080;
-  font-size: 1.4rem;
-  padding: .5rem;
-}
-
-.l-doc h5 {
-  border-left: 1rem solid #000080;
-  font-size: 1rem;
-  padding: .5rem;
-}
-
-.l-doc h6 {
-  font-size: 1rem;
-  padding: .5rem;
-}
-
-.l-doc ol,
-.l-doc ul {
-  padding-left: 1.5rem;
-}
-
-.l-doc p {
-  text-indent: 1rem;
-}
-
-.l-doc pre {
-  background-color: #e0e0e0;
-  border: 1px solid #808080;
-  padding: .25rem;
-}
-
-.l-doc table {
-  border: 1px solid #808080;
-  border-collapse: separate;
-  border-spacing: 1px;
-}
-
-.l-doc td,
-.l-doc th {
-  border: 1px solid #808080;
-  padding: .25rem;
-}
-
-.l-doc th {
-  background-color: #e0e0e0;
 }
 
 /* .l-header */
@@ -115,10 +29,9 @@ img {
 .is-page .l-header {
   border-bottom: 2px solid #000080;
 }
-
-  .l-header .l-wrap {
-    background-color: rgba(192, 192, 192, 0.5);
-  }
+.l-header .sub-wrap {
+  background-color: rgba(192, 192, 192, 0.5);
+}
 
   .l-header-title {
     font-size: 1.8rem;
@@ -176,52 +89,53 @@ img {
     background-color: #c0c0c0;
   }
 
-    .l-main-contents-header-title {
+    .l-main-contents-header .list-title {
       color: #000080;
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       margin: 0;
       padding: 1rem;
     }
 
-      .l-main-contents-header-title a {
+      .l-main-contents-header .list-title a {
         display: block;
         text-decoration: none;
       }
-
-      .l-main-contents-header-title a:hover {
+      .l-main-contents-header .list-title a:hover {
         text-decoration: underline;
       }
 
-    .l-main-contents-header .blocks {
+    .l-main-contents-header .list-items {
       background-color: #a0a0a0;
       color: #000080;
     }
 
-  .l-main-nav {
+  /* サイドバーメニュー */
+  .l-main-sidebar_menu {
     background-color: #60a0ff;
     padding: 1rem;
   }
 
-    .l-main-nav ul {
+    .l-main-sidebar_menu ul {
       margin: 0;
     }
 
-    .l-main-nav .menu-items {
+    .l-main-sidebar_menu .menu-items {
       background-color: #c0c0c0;
       margin-bottom: .5rem;
     }
 
-    .l-main-nav .menu-items.is-top {
+    .l-main-sidebar_menu .menu-items.is-top {
       font-weight: bold;
     }
 
-    .l-main-nav a {
+    .l-main-sidebar_menu a {
       color: inherit;
       display: block;
       padding: .5rem;
       text-decoration: none;
     }
 
+  /* サイドバー(目次) */
   .l-main-toc {
     padding: 1rem;
   }
@@ -256,21 +170,25 @@ img {
 }
 
   .l-footer-menu,
-  .l-footer-socialmenu {
+  .l-footer-social_menu {
     text-align: center;
   }
 
   .l-footer-menu > ul,
-  .l-footer-socialmenu > ul {
-    margin: 0;
+  .l-footer-social_menu > ul {
     padding: 1rem 0;
   }
 
-  .l-footer-menu li {
+  .l-footer-menu .menu-items {
     border-right: 1px solid #404040;
+    display: inline-block;
   }
 
-  .l-footer-menu li:first-child {
+  .l-footer-menu .menu-items > a {
+    padding: 0 1rem;
+  }
+
+  .l-footer-menu .menu-items:first-child {
     border-left: 1px solid #404040;
   }
 
@@ -278,7 +196,7 @@ img {
     text-align: center;
   }
 
-  .l-footer-socialmenu .socialmenus:hover {
+  .l-footer-social_menu .social_menu-items:hover {
     background-color: #808080;
   }
 
@@ -296,71 +214,35 @@ img {
   }
 
   /* サブメニューはタブレットモードになると1行に2項目が表示される */
-  .l-main-nav ul {
+  .l-main-sidebar_menu ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
   }
 
-    .l-main-nav .menu-items {
+    .l-main-sidebar_menu .menu-items {
       flex: 0 0 calc(50% - .5rem);
     }
 
-    .l-main-nav .menu-items.is-top {
+    .l-main-sidebar_menu .menu-items.is-top {
       flex: 0 0 100%;
     }
-
-  .box.is-cols-1 .boxes {
-    flex: 0 0 100%;
-  }
-
-  /* ボックスの分割はタブレットモード以降で有効 */
-  .box.is-cols-2 .boxes {
-    flex: 0 0 calc(50% - .5rem);
-  }
-
-  .box.is-cols-3 .boxes {
-    flex: 0 0 calc((100% / 3) - .5rem);
-  }
 
 }
 
 /* デスクトップPCモード */
 @media(min-width: 50rem){
 
-  .l-wrap {
+  .sub-wrap {
     margin: 0 auto;
     width: 47rem; /* 47 = 50 - (1 * 2 + 1) ... 余白分2remとスクロールバーのスペース確保分1rem */
-  }
-
-  /* 説明ボックスの分割はデスクトップPCモード以降で有効 */
-
-  .intro {
-    flex-flow: row nowrap;
-  }
-
-  .intros.is-icon {
-    flex: 0 0 auto;
-  }
-
-  .intros.is-description {
-    flex: 1 1 auto;
-    padding: 0 1rem;
-  }
-
-  .frontmenus {
-    flex: 0 0 25%;
-  }
-
-  .frontmenus.has-submenu {
-    flex-basis: 50%;
   }
 
 }
 
 @media(min-width: 78rem){ /* 78 = 50 + 14 * 2 */
 
-  .is-page .l-header .l-wrap {
+  .is-page .l-header .sub-wrap {
     position: relative;
   }
 
@@ -385,19 +267,19 @@ img {
     justify-content: center;
   }
 
-    .l-main .l-wrap.is-left {
+    .l-main .sub-wrap.is-left {
       display: flex; /* Safariでメニューを縦いっぱいに表示する */
       flex: 1 0 14rem;
       flex-flow: row wrap; /* 万が一のために余計な要素は下に逃す */
       order: 1;
     }
 
-    .l-main .l-wrap.is-center {
+    .l-main .sub-wrap.is-center {
       flex: 0 0 47rem;
       order: 2;
     }
 
-    .l-main .l-wrap.is-right {
+    .l-main .sub-wrap.is-right {
       flex: 1 0 14rem;
       order: 3;
     }
@@ -406,11 +288,11 @@ img {
     width: 14rem;
   }
 
-  .l-main-nav { /* display: flex; と指定した .l-wrap.is-left の子要素 */
+  .l-main-sidebar_menu { /* display: flex; と指定した .l-wrap.is-left の子要素 */
     flex: 0 0 14rem;
   }
 
-  .l-main-nav .menu-items {
+  .l-main-sidebar_menu .menu-items {
     flex: 0 0 100%;
   }
 

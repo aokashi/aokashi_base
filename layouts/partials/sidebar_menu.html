@@ -1,8 +1,13 @@
-<div class="l-wrap is-left">
-  <nav class="l-main-nav menu">
-    <ul>{{ range (where .Site.Pages.ByWeight "Section" .Section) }}{{ if eq .File.BaseFileName "index" }}
-      <li class="menus is-top"><a href="{{ replace .URL ".html" "/" }}" title="{{ .Title }}">{{ .Title }}</a></li>{{ else if .IsPage }}
-      <li class="menus"><a href="{{ .URL }}" title="{{ .Title }}">{{ .Title }}</a></li>{{ end }}{{ end }}
+<div class="sub-wrap is-left">
+  <nav class="l-main-sidebar_menu menu">
+    <ul>
+    {{ range (where .Site.Pages.ByWeight "Section" .Section) }}
+      {{ if eq .File.BaseFileName "index" }}
+      <li class="menu-items is-top"><a href="{{ replace .URL ".html" "/" }}" title="{{ .Title }}">{{ .Title }}</a></li>
+      {{ else if .IsPage }}
+      <li class="menu-items"><a href="{{ .URL }}" title="{{ .Title }}">{{ .Title }}</a></li>
+      {{ end }}
+    {{ end }}
     </ul>
   </nav>
 </div>

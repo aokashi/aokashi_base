@@ -1,0 +1,6 @@
+<section class="box-items">
+{{ with .Get "title" }}
+  <h6 class="box-items-title">{{ . }}</h6>
+{{ end }}
+{{ .Inner }}
+</section>

@@ -18,7 +18,7 @@ body {
   justify-content: center;
 }
 
-.l-wrap {
+.sub-wrap {
   background-color: rgba(192, 192, 192, .5);
 }
 
@@ -26,11 +26,11 @@ body {
   text-align: center;
 }
 
-.l-main-topmenu .frontmenu-items {
+.l-main-topmenu .front_menu-items {
   padding: .5rem;
 }
 
-.l-main-topmenu .frontmenu-items .sub-container {
+.l-main-topmenu .front_menu-items .sub-container {
   background-repeat: no-repeat;
   background-position: 50% 25%;
   background-size: 28vw 28vw;
@@ -40,35 +40,35 @@ body {
   padding: .25rem;
 }
 
-.l-main-topmenu .frontmenu-items:hover .sub-container {
+.l-main-topmenu .front_menu-items:hover .sub-container {
   border-color: #404040;
 }
 
-.l-main-topmenu .frontmenu-items.has-submenu .sub-container {
+.l-main-topmenu .front_menu-items.has-submenu .sub-container {
   background-position-x: calc(25% - (128px / 4));
 }
 
-.l-main-topmenu .frontmenu-items.is-playing .sub-container {
+.l-main-topmenu .front_menu-items.is-playing .sub-container {
   background: #ffc0c0 url('playing.png');
 }
 
-.l-main-topmenu .frontmenu-items.is-making .sub-container {
+.l-main-topmenu .front_menu-items.is-making .sub-container {
   background: #a0e0e0 url('making.png');
 }
 
-.l-main-topmenu .frontmenu-items.is-about .sub-container {
+.l-main-topmenu .front_menu-items.is-about .sub-container {
   background: #c0ffc0 url('about.png');
 }
 
-.l-main-topmenu .frontmenu-items.is-twitter .sub-container {
+.l-main-topmenu .front_menu-items.is-twitter .sub-container {
   background: #c0c0ff url('twitter.png');
 }
 
-.l-main-topmenu .frontmenu-items.is-github .sub-container {
+.l-main-topmenu .front_menu-items.is-github .sub-container {
   background: #d0d0d0 url('github.png');
 }
 
-.l-main-topmenu .frontmenu-items.is-blog .sub-container {
+.l-main-topmenu .front_menu-items.is-blog .sub-container {
   background: #e0e0a0 url('blog.png');
 }
 
@@ -87,30 +87,26 @@ body {
   width: 100%;
 }
 
-.l-main-topmenu .frontmenu-items.has-submenu .frontmenu-items-title {
+.l-main-topmenu .front_menu-items.has-submenu .frontmenu-items-title {
   width: 50%;
 }
 
-.l-main-topmenu .frontmenu-items-nav {
+.l-main-topmenu .front_menu-items-menu {
   background: rgba(0, 0, 0, .125) url('frontmenus-nav_bg.png') repeat-x left bottom;
   border-radius: 0 .25rem .25rem 0;
   padding: 1rem;
 }
 
-.l-main-topmenu .frontmenu-items-nav ul {
-  margin: 0;
-}
-
-.l-main-topmenu .frontmenu-items-nav li {
+.l-main-topmenu .front_menu-items-menu li {
   background-color: transparent;
   margin: .5rem 0;
 }
 
-.l-main-topmenu .frontmenu-items-nav li:hover {
+.l-main-topmenu .front_menu-items-menu li:hover {
   background-color: #e0e0e0;
 }
 
-.l-main-topmenu .frontmenu-items-nav a {
+.l-main-topmenu .front_menu-items-menu a {
   display: block;
   padding: .5rem;
 }
@@ -151,30 +147,19 @@ body {
   padding: 0 1rem;
 }
 
-.l-main-topic .linkbutton {
+.l-main-topic .link_button {
   display: inline-block;
   font-size: 1rem;
   padding: 0;
 }
 
-.l-main-topic .linkbutton a {
+.l-main-topic .link_button a {
   background-color: transparent;
   border: 0;
 }
 
-.l-main-topic .linkbutton a:hover {
+.l-main-topic .link_button a:hover {
   background-color: #c0c0c0;
-}
-
-.l-main-content .boxes {
-  background-color: #f0f0f0;
-  border: 2px solid #808080;
-}
-
-.l-main-content .boxes-title {
-  background-color: #c0c0c0;
-  border-bottom: 2px solid #808080;
-  font-size: 1.4rem;
 }
 
 /*
@@ -186,7 +171,7 @@ body {
 /* タブレットモード */
 @media(min-width: 32rem) {
   
-  .l-main-topmenu .frontmenu-items .sub-container {
+  .l-main-topmenu .front_menu-items .sub-container {
     background-size: 128px 128px;
     height: 192px;
   }

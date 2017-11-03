@@ -4,7 +4,7 @@
 
 {{ define "header" }}
   <header class="l-header">
-    <div class="l-wrap is-center">
+    <div class="sub-wrap is-center">
       <h1 class="l-header-title">
         <img class="l-header-title-img" src="{{ .Site.BaseURL }}img/aokashihome_logo.png" alt="{{ .Site.Title }}">
       </h1>
@@ -14,22 +14,28 @@
 
 {{ define "main" }}
   <main class="l-main">
-    <div class="l-wrap is-center">
-      <nav class="l-main-topmenu frontmenu">{{ range .Site.Menus.top }}
-        <section class="frontmenu-items is-{{ .Identifier }}{{ if .HasChildren }} has-submenu{{ end }}">
+    <div class="sub-wrap is-center">
+      <nav class="l-main-topmenu front_menu">
+      {{ range .Site.Menus.top }}
+        <section class="front_menu-items is-{{ .Identifier }}{{ if .HasChildren }} has-submenu{{ end }}">
           <div class="sub-container">
-            <a href="{{ .URL }}" class="frontmenu-items-link" title="{{ .Name }}">
-              <h2 class="frontmenu-items-title">{{ .Name }}</h2>
-            </a>{{ if .HasChildren }}<nav class="frontmenu-items-nav">
-              <ul>{{ range .Children }}
-                <li><a href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a></li>{{ end }}
+            <a href="{{ .URL }}" class="front_menu-items-link" title="{{ .Name }}">
+              <h2 class="front_menu-items-title">{{ .Name }}</h2>
+            </a>
+          {{ if .HasChildren }}
+            <nav class="front_menu-items-menu menu">
+              <ul>
+              {{ range .Children }}
+                <li><a href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a></li>
+              {{ end }}
               </ul>
             </nav>
-            {{ end }}
+          {{ end }}
           </div>
-        </section>{{ end }}
+        </section>
+      {{ end }}
       </nav>
-      <div class="l-main-content l-doc">
+      <div class="l-main-content set-doc">
 
 {{ partial "index_content.html" . }}
 
