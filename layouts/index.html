@@ -1,5 +1,5 @@
 {{ define "head" }}
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style_index.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/layout_index.css">
 {{ end }}
 
 {{ define "header" }}
@@ -15,12 +15,12 @@
 {{ define "main" }}
   <main class="l-main">
     <div class="l-wrap is-center">
-      <nav class="l-main-menu frontmenu">{{ range .Site.Menus.top }}
-        <section class="l-main-menu-{{ .Identifier }} frontmenus{{ if .HasChildren }} has-submenu{{ end }}">
+      <nav class="l-main-topmenu frontmenu">{{ range .Site.Menus.top }}
+        <section class="frontmenu-items is-{{ .Identifier }}{{ if .HasChildren }} has-submenu{{ end }}">
           <div class="sub-container">
-            <a href="{{ .URL }}" class="frontmenus-link" title="{{ .Name }}">
-              <h2 class="frontmenus-title">{{ .Name }}</h2>
-            </a>{{ if .HasChildren }}<nav class="frontmenus-nav">
+            <a href="{{ .URL }}" class="frontmenu-items-link" title="{{ .Name }}">
+              <h2 class="frontmenu-items-title">{{ .Name }}</h2>
+            </a>{{ if .HasChildren }}<nav class="frontmenu-items-nav">
               <ul>{{ range .Children }}
                 <li><a href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a></li>{{ end }}
               </ul>

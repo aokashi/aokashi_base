@@ -26,11 +26,11 @@ body {
   text-align: center;
 }
 
-.l-main-menu .frontmenus {
+.l-main-topmenu .frontmenu-items {
   padding: .5rem;
 }
 
-.l-main-menu .frontmenus .sub-container {
+.l-main-topmenu .frontmenu-items .sub-container {
   background-repeat: no-repeat;
   background-position: 50% 25%;
   background-size: 28vw 28vw;
@@ -40,44 +40,44 @@ body {
   padding: .25rem;
 }
 
-.l-main-menu .frontmenus:hover .sub-container {
+.l-main-topmenu .frontmenu-items:hover .sub-container {
   border-color: #404040;
 }
 
-.l-main-menu .frontmenus.has-submenu .sub-container {
+.l-main-topmenu .frontmenu-items.has-submenu .sub-container {
   background-position-x: calc(25% - (128px / 4));
 }
 
-.l-main-menu-playing .sub-container {
+.l-main-topmenu .frontmenu-items.is-playing .sub-container {
   background: #ffc0c0 url('playing.png');
 }
 
-.l-main-menu-making .sub-container {
+.l-main-topmenu .frontmenu-items.is-making .sub-container {
   background: #a0e0e0 url('making.png');
 }
 
-.l-main-menu-about .sub-container {
+.l-main-topmenu .frontmenu-items.is-about .sub-container {
   background: #c0ffc0 url('about.png');
 }
 
-.l-main-menu-twitter .sub-container {
+.l-main-topmenu .frontmenu-items.is-twitter .sub-container {
   background: #c0c0ff url('twitter.png');
 }
 
-.l-main-menu-github .sub-container {
+.l-main-topmenu .frontmenu-items.is-github .sub-container {
   background: #d0d0d0 url('github.png');
 }
 
-.l-main-menu-blog .sub-container {
+.l-main-topmenu .frontmenu-items.is-blog .sub-container {
   background: #e0e0a0 url('blog.png');
 }
 
-.l-main-menu .frontmenus-link {
+.l-main-topmenu .frontmenu-items-link {
   display: block;
   height: 100%;
 }
 
-.l-main-menu .frontmenus-title {
+.l-main-topmenu .frontmenu-items-title {
   bottom: 0;
   font-size: 1.4rem;
   margin: .5rem 0;
@@ -87,30 +87,30 @@ body {
   width: 100%;
 }
 
-.l-main-menu .frontmenus.has-submenu .frontmenus-title {
+.l-main-topmenu .frontmenu-items.has-submenu .frontmenu-items-title {
   width: 50%;
 }
 
-.l-main-menu .frontmenus-nav {
+.l-main-topmenu .frontmenu-items-nav {
   background: rgba(0, 0, 0, .125) url('frontmenus-nav_bg.png') repeat-x left bottom;
   border-radius: 0 .25rem .25rem 0;
   padding: 1rem;
 }
 
-.l-main-menu .frontmenus-nav ul {
+.l-main-topmenu .frontmenu-items-nav ul {
   margin: 0;
 }
 
-.l-main-menu .frontmenus-nav li {
+.l-main-topmenu .frontmenu-items-nav li {
   background-color: transparent;
   margin: .5rem 0;
 }
 
-.l-main-menu .frontmenus-nav li:hover {
+.l-main-topmenu .frontmenu-items-nav li:hover {
   background-color: #e0e0e0;
 }
 
-.l-main-menu .frontmenus-nav a {
+.l-main-topmenu .frontmenu-items-nav a {
   display: block;
   padding: .5rem;
 }
@@ -186,7 +186,7 @@ body {
 /* タブレットモード */
 @media(min-width: 32rem) {
   
-  .l-main-menu .frontmenus .sub-container {
+  .l-main-topmenu .frontmenu-items .sub-container {
     background-size: 128px 128px;
     height: 192px;
   }

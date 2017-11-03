@@ -7,7 +7,7 @@
           <header class="l-main-contents-header block">
             <h2 class="l-main-contents-header-title">{{ .Title }}</h2>
           </header>
-          <article class="l-main-contents-article l-doc">
+          <article class="l-main-contents-article set-doc">
             <div class="box is-cols-2">{{ range .Data.Pages }}{{ $date := .Date.Format "2006-01-02" }}{{ if ne $date "0001-01-01" }}
               <section class="boxes">
                 <h6 class="boxes-title"><a href="{{ if eq .File.BaseFileName "index" }}{{ replace .URL ".html" "/" }}{{ else }}{{ .URL }}{{ end }}" title="{{ .Title }}">{{ .Title }}</a></h6>
