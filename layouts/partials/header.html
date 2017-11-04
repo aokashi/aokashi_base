@@ -4,11 +4,10 @@
         <a href="{{ .Site.BaseURL }}" title="Aokashi Home"><img src="{{ .Site.BaseURL }}img/aokashihome_logo_mini.png" alt="{{ .Site.Title }}"></a>
       </h1>
       <nav class="l-header-menu menu">
-        <ul>{{ range .Site.Menus.main }}
-          <li class="menu-items is-{{ .Identifier }}"><a href="{{ .URL }}" title="{{ .Name }}">{{ upper .Identifier }}</a></li>{{ end }}
-          {{ if isset .Site.Params "blog" }}<li class="menu-items is-blog"><a href="{{ .Site.Params.blog }}">Blog</a></li>{{ end }}
-          {{ if isset .Site.Params "twitter" }}<li class="menu-items is-twitter"><a href="{{ .Site.Params.twitter }}">Twitter</a></li>{{ end }}
-          {{ if isset .Site.Params "github" }}<li class="menu-items is-github"><a href="{{ .Site.Params.github }}">GitHub</a></li>{{ end }}
+        <ul>
+        {{ range .Site.Menus.main }}
+          <li class="menu-items is-{{ .Identifier }}"><a href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a></li>
+        {{ end }}
         </ul>
       </nav>
     </div>
