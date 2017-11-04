@@ -79,6 +79,11 @@ body {
   background-image: url('blog.png');
 }
 
+.l-main-topmenu .front_menu-items.is-wwa_fansq .sub-container {
+  background-color: #ff9a31;
+  background-image: url('wwa_fansq.png');
+}
+
 .l-main-topmenu .front_menu-items-link {
   display: block;
   height: 100%;
@@ -86,7 +91,7 @@ body {
 
 .l-main-topmenu .front_menu-items-title {
   bottom: 0;
-  font-size: 1.4rem;
+  font-size: 1rem;
   margin: .5rem 0;
   overflow: hidden;
   position: absolute;
@@ -101,12 +106,11 @@ body {
 .l-main-topmenu .front_menu-items-menu {
   background: rgba(0, 0, 0, .125) url('front_menu-items-menu_bg.png') repeat-x left bottom;
   border-radius: 0 .25rem .25rem 0;
-  padding: 1rem;
+  padding: .5rem 1rem;
 }
 
 .l-main-topmenu .front_menu-items-menu li {
   background-color: transparent;
-  margin: .5rem 0;
 }
 
 .l-main-topmenu .front_menu-items-menu li:hover {
