@@ -59,9 +59,9 @@ body {
   background-image: url('making.png');
 }
 
-.l-main-topmenu .front_menu-items.is-about .sub-container {
+.l-main-topmenu .front_menu-items.is-aboutme .sub-container {
   background-color: #c0ffc0;
-  background-image: url('about.png');
+  background-image: url('aboutme.png');
 }
 
 .l-main-topmenu .front_menu-items.is-twitter .sub-container {

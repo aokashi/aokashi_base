@@ -16,7 +16,7 @@
   <main class="l-main">
     <div class="sub-wrap is-center">
       <nav class="l-main-topmenu front_menu">
-      {{ range .Site.Menus.top }}
+      {{ range .Site.Menus.main }}
         <section class="front_menu-items is-{{ .Identifier }}{{ if .HasChildren }} has-submenu{{ end }}">
           <div class="sub-container">
             <a href="{{ .URL }}" class="front_menu-items-link" title="{{ .Name }}">
