@@ -185,7 +185,9 @@ img {
   }
 
   .l-footer-menu .menu-items {
-    border-right: 1px solid #404040;
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-color: #c0c0c0;
     display: inline-block;
   }
 
@@ -194,7 +196,7 @@ img {
   }
 
   .l-footer-menu .menu-items:first-child {
-    border-left: 1px solid #404040;
+    border-left-width: 1px;
   }
 
   .l-footer-copyright {
