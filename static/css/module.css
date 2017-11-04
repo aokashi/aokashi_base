@@ -6,234 +6,6 @@
  * -----------
  */
 
-/* .topicpath */
-
-.topicpath-here {
-  font-weight: bold;
-}
-
-.topicpath ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-  .topicpath li {
-    display: inline-block;
-  }
-
-  .topicpath li:before {
-    content: ">";
-    margin: .5rem;
-  }
-
-  .topicpath li:first-child:before {
-    content: none;
-  }
-
-  .topicpath a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .topicpath a:hover {
-    text-decoration: underline;
-  }
-
-/* .box + .intro */
-
-.box,
-.intro {
-  display: flex;
-  margin: 1rem 0;
-}
-
-/* .box */
-
-.box {
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
-
-.boxes {
-  margin: .5rem 0;
-  padding: .5rem;
-}
-
-.boxes-title {
-  margin: -.5rem -.5rem 1rem -.5rem;
-  padding: .5rem;
-}
-
-/* .intro */
-
-.intro {
-  align-items: flex-start;
-  flex-flow: column wrap;
-}
-
-  .intros.is-icon {
-    margin: 0 auto;
-  }
-
-  .intros-title {
-    margin: 0 -.5rem 0 -.5rem;
-  }
-
-/* スマートフォンでは2分割する横幅が足りないので分割しないままになる、mediaクエリー部分参照のこと */
-
-    .blocks > ul,
-    .blocks > a,
-    .blocks > p,
-    .blocks > time {
-      padding: .5rem 1rem;
-    }
-
-    .blocks > a {
-      color: inherit;
-      display: block;
-      text-decoration: none;
-    }
-
-    .blocks > a:hover {
-      text-decoration: underline;
-    }
-
-    .blocks > time {
-      display: block;
-    }
-
-/* .note */
-
-.note {
-  background-repeat: no-repeat;
-  background-position: .5rem center;
-  background-size: 48px 48px;
-  margin: 1rem 0;
-  min-height: 64px; /* 64pxは48pxに余白分8pxを2つ足した値 */
-  padding: .5rem .5rem .5rem 64px;
-}
-.note.is-notice {
-  background-color: #e0e080;
-  background-image: url('note-is-notice.png');
-  border: 2px solid #808000;
-  color: #404000;
-}
-.note.is-info {
-  background-color: #80e0e0;
-  background-image: url('note-is-info.png');
-  border: 2px solid #004080;
-  color: #000080;
-}
-.note.is-warn {
-  background-color: #f0a0a0;
-  background-image: url('note-is-warn.png');
-  border: 2px solid #c04040;
-  color: #400000;
-}
-
-/* .linkbutton */
-
-.linkbutton {
-  font-size: 1.4rem;
-  font-weight: bold;
-  text-align: center;
-  margin: 1rem 0;
-}
-
-.linkbutton a {
-  background-color: #c0c0c0;
-  border: 2px solid #404040;
-  padding: .5rem;
-}
-
-.linkbutton a:link,
-.linkbutton a:visited {
-  color: #000080;
-  text-decoration: none;
-}
-
-.linkbutton a:hover {
-  background-color: #808080;
-}
-
-/* .menu, .socialmenu, .frontmenu */
-
-.menu > ul,
-.socialmenu > ul,
-.frontmenus-nav > ul {
-  padding: 0;
-}
-
-.menu.is-inline li {
-  display: inline;
-  padding: 0 1rem;
-}
-
-.menu a,
-.socialmenu a,
-.frontmenu a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.menu a:hover,
-.socialmenu a:hover,
-.frontmenu a:hover {
-  text-decoration: underline;
-}
-
-/* .socialmenu */
-
-.socialmenus {
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: .25em center;
-  background-size: 24px 24px;
-  display: inline-block;
-}
-.socialmenus.is-blog {
-  background-image: url('socialmenus_blog.png');
-}
-.socialmenus.is-twitter {
-  background-image: url('socialmenus_twitter.png');
-}
-.socialmenus.is-github {
-  background-image: url('socialmenus_github.png');
-}
-
-.socialmenus a {
-  display: inline-block;
-  padding: .25em .25em .25em 32px; /* 32pxはアイコンの24pxに余白分8pxを足した値 */
-}
-
-/* .frontmenu */
-
-.frontmenu {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.frontmenu .sub-container {
-  position: relative;
-}
-
-.frontmenus {
-  flex: 0 0 50%;
-}
-
-.frontmenus.has-submenu {
-  flex-basis: 100%;
-}
-
-.frontmenus-nav {
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 50%;
-}
-
 /* .font */
 
 .font.is-small {
@@ -302,4 +74,343 @@
 
 .bg.is-gray {
   background-color: #a0a0a0;
+}
+
+/* .box + .intro */
+
+.box,
+.intro {
+  display: flex;
+  margin: 1rem 0;
+}
+
+/* .box */
+
+.box {
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.box-items {
+  margin: .5rem 0;
+  padding: .5rem;
+}
+
+.box-items-title {
+  margin: -.5rem -.5rem 1rem -.5rem;
+  padding: .5rem;
+}
+
+/* .intro */
+
+.intro {
+  align-items: flex-start;
+  flex-flow: column wrap;
+}
+
+  .intro-icon {
+    margin: 0 auto;
+  }
+
+  .intro-items-title {
+    margin: 0 -.5rem 0 -.5rem;
+  }
+
+/* スマートフォンでは2分割する横幅が足りないので分割しないままになる、mediaクエリー部分参照のこと */
+
+/* .list */
+
+  .list-items > ul,
+  .list-items > a,
+  .list-items > p,
+  .list-items > time {
+    padding: .5rem 1rem;
+  }
+
+  .list-items > a {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+  }
+
+  .list-items > a:hover {
+    text-decoration: underline;
+  }
+
+  .list-items > time {
+    display: block;
+  }
+
+/* .note */
+
+.note {
+  background-repeat: no-repeat;
+  background-position: .5rem center;
+  background-size: 48px 48px;
+  margin: 1rem 0;
+  min-height: 64px; /* 64pxは48pxに余白分8pxを2つ足した値 */
+  padding: .5rem .5rem .5rem 64px;
+}
+.note.is-notice {
+  background-color: #e0e080;
+  background-image: url('note-is-notice.png');
+  border: 2px solid #808000;
+  color: #404000;
+}
+.note.is-info {
+  background-color: #80e0e0;
+  background-image: url('note-is-info.png');
+  border: 2px solid #004080;
+  color: #000080;
+}
+.note.is-warn {
+  background-color: #f0a0a0;
+  background-image: url('note-is-warn.png');
+  border: 2px solid #c04040;
+  color: #400000;
+}
+
+/* .linkbutton */
+
+.link_button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.link_button a {
+  background-color: #c0c0c0;
+  border: 2px solid #404040;
+  padding: .5rem;
+}
+.link_button a:link,
+.link_button a:visited {
+  color: #000080;
+  text-decoration: none;
+}
+.link_button a:hover {
+  background-color: #808080;
+}
+
+/* Navigation Reset */
+
+.menu > ul,
+.social_menu > ul,
+.front_menu-items-menu > ul,
+.topicpath > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu a,
+.social_menu a,
+.front_menu a,
+.topicpath a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu a:hover,
+.social_menu a:hover,
+.front_menu a:hover,
+.topicpath a:hover {
+  text-decoration: underline;
+}
+
+/* .socialmenu */
+
+.social_menu-items {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: .25em center;
+  background-size: 24px 24px;
+  display: inline-block;
+}
+.social_menu-items.is-blog {
+  background-image: url('socialmenus_blog.png');
+}
+.social_menu-items.is-twitter {
+  background-image: url('socialmenus_twitter.png');
+}
+.social_menu-items.is-github {
+  background-image: url('socialmenus_github.png');
+}
+
+.social_menu-items a {
+  display: inline-block;
+  padding: .25em .25em .25em 32px; /* 32pxはアイコンの24pxに余白分8pxを足した値 */
+}
+
+/* .front_menu */
+
+.front_menu {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.front_menu-items {
+  flex: 0 0 50%;
+}
+.front_menu-items.has-submenu {
+  flex-basis: 100%;
+}
+.front_menu-items .sub-container {
+  position: relative;
+}
+  .front_menu-items-menu {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+  }
+
+/* .topicpath */
+
+.topicpath-items {
+  display: inline-block;
+}
+.topicpath-items.is-here {
+  font-weight: bold;
+}
+.topicpath-items:before {
+  content: ">";
+  margin: .5rem;
+}
+.topicpath-items:first-child:before {
+  content: none;
+}
+
+/* .set-doc */
+
+.set-doc a:link {
+  color: #008080;
+}
+
+.set-doc a:visited {
+  color: #800080;
+}
+
+.set-doc blockquote {
+  background-color: #e0e0e0;
+  padding: 1rem;
+}
+
+.set-doc code {
+  background-color: #e0e0e0;
+}
+
+.set-doc h3,
+.set-doc h4,
+.set-doc h5,
+.set-doc h6 {
+  color: #000080;
+}
+
+.set-doc h3 {
+  background: #c0c0c0 url('heading_mark.png') no-repeat 8px center;
+  border: 6px double #000080; /* 6pxは2重線になる3pxを2倍にした値 */
+  font-size: 1.4rem;
+  padding: .5rem .5rem .5rem 48px; /* 48pxは見出しの印の幅32pxと余白の16pxを足した値 */
+}
+
+.set-doc h4 {
+  border-bottom: 2px solid #000080;
+  font-size: 1.4rem;
+  padding: .5rem;
+}
+
+.set-doc h5 {
+  border-left: 1rem solid #000080;
+  font-size: 1rem;
+  padding: .5rem;
+}
+
+.set-doc h6 {
+  font-size: 1rem;
+  padding: .5rem;
+}
+
+.set-doc ol,
+.set-doc ul {
+  padding-left: 1.5rem;
+}
+
+.set-doc p {
+  text-indent: 1rem;
+}
+
+.set-doc pre {
+  background-color: #e0e0e0;
+  border: 1px solid #808080;
+  padding: .25rem;
+}
+
+.set-doc table {
+  border: 1px solid #808080;
+  border-collapse: separate;
+  border-spacing: 1px;
+}
+
+.set-doc td,
+.set-doc th {
+  border: 1px solid #808080;
+  padding: .25rem;
+}
+
+.set-doc th {
+  background-color: #e0e0e0;
+}
+
+/*
+ * -----------
+ * Media Query
+ * -----------
+ */
+
+/* タブレットモードとPCモード */
+@media (min-width: 32rem) {
+
+  .box.is-1-cols .box-items {
+    flex: 0 0 100%;
+  }
+
+  /* ボックスの分割はタブレットモード以降で有効 */
+  .box.is-2-cols .box-items {
+    flex: 0 0 calc(50% - .5rem);
+  }
+
+  .box.is-3-cols .box-items {
+    flex: 0 0 calc((100% / 3) - .5rem);
+  }
+
+}
+
+/* PCモード */
+@media (min-width: 50rem) {
+  
+  /* 説明ボックスの分割はデスクトップPCモード以降で有効 */
+  .intro {
+    flex-flow: row nowrap;
+  }
+
+  .intro-icon {
+    flex: 0 0 auto;
+  }
+
+  .intro-description {
+    flex: 1 1 auto;
+    padding: 0 1rem;
+  }
+
+  .front_menu-items {
+    flex: 0 0 25%;
+  }
+
+  .front_menu-items.has-submenu {
+    flex-basis: 50%;
+  }
+
 }

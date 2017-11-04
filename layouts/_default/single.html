@@ -1,14 +1,18 @@
 {{ define "main" }}
 
   <main class="l-main">
-    <div class="l-wrap is-center">
+    <div class="sub-wrap is-center">
       <div class="l-main-content">
         <section class="l-main-contents">
-          <header class="l-main-contents-header block">
-            <h2 class="l-main-contents-header-title">{{ .Title }}</h2>{{ if ne .File.BaseFileName "index" }}
-            <nav class="blocks"><a href="./" title="{{ .Section }}">戻る</a></nav>{{ end }}
+          <header class="l-main-contents-header list">
+            <h2 class="list-title">{{ .Title }}</h2>
+          {{ if ne .File.BaseFileName "index" }}
+            <nav class="list-items is-link">
+              <a href="./" title="{{ .Section }}">戻る</a>
+            </nav>
+          {{ end }}
           </header>
-          <article class="l-main-contents-article l-doc">
+          <article class="l-main-contents-article set-doc">
 
 {{ .Content }}
 

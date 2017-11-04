@@ -1,16 +1,20 @@
   <footer class="l-footer">
-    <div class="l-wrap is-center">
-      <nav class="l-footer-menu menu is-inline">
-        <ul>{{ if not .IsHome }}
-          <li><a href="{{ .Site.BaseURL }}" title="HOME">Home</a></li>{{ end }}{{ range .Site.Menus.footer }}
-          <li><a href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a></li>{{ end }}
+    <div class="sub-wrap is-center">
+      <nav class="l-footer-menu menu">
+        <ul>
+        {{ if not .IsHome }}
+          <li class="menu-items"><a href="{{ .Site.BaseURL }}" title="HOME">Home</a></li>
+        {{ end }}
+        {{ range .Site.Menus.footer }}
+          <li class="menu-items"><a href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a></li>
+        {{ end }}
         </ul>
       </nav>
-      <nav class="l-footer-socialmenu socialmenu">
+      <nav class="l-footer-social_menu social_menu">
         <ul>
-          {{ if isset .Site.Params "blog" }}<li class="socialmenus is-blog"><a href="{{ .Site.Params.blog }}">Blog</a></li>{{ end }}
-          {{ if isset .Site.Params "twitter" }}<li class="socialmenus is-twitter"><a href="{{ .Site.Params.twitter }}">Twitter</a></li>{{ end }}
-          {{ if isset .Site.Params "github" }}<li class="socialmenus is-github"><a href="{{ .Site.Params.github }}">GitHub</a></li>{{ end }}
+          {{ if isset .Site.Params "blog" }}<li class="social_menu-items is-blog"><a href="{{ .Site.Params.blog }}">Blog</a></li>{{ end }}
+          {{ if isset .Site.Params "twitter" }}<li class="social_menu-items is-twitter"><a href="{{ .Site.Params.twitter }}">Twitter</a></li>{{ end }}
+          {{ if isset .Site.Params "github" }}<li class="social_menu-items is-github"><a href="{{ .Site.Params.github }}">GitHub</a></li>{{ end }}
         </ul>
       </nav>
       <div class="l-footer-copyright">

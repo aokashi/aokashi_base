@@ -18,19 +18,20 @@ body {
   justify-content: center;
 }
 
-.l-wrap {
+.sub-wrap {
   background-color: rgba(192, 192, 192, .5);
+  padding: .5rem;
 }
 
 .l-header-title {
   text-align: center;
 }
 
-.l-main-menu .frontmenus {
+.l-main-topmenu .front_menu-items {
   padding: .5rem;
 }
 
-.l-main-menu .frontmenus .sub-container {
+.l-main-topmenu .front_menu-items .sub-container {
   background-repeat: no-repeat;
   background-position: 50% 25%;
   background-size: 28vw 28vw;
@@ -40,44 +41,50 @@ body {
   padding: .25rem;
 }
 
-.l-main-menu .frontmenus:hover .sub-container {
+.l-main-topmenu .front_menu-items:hover .sub-container {
   border-color: #404040;
 }
 
-.l-main-menu .frontmenus.has-submenu .sub-container {
+.l-main-topmenu .front_menu-items.has-submenu .sub-container {
   background-position-x: calc(25% - (128px / 4));
 }
 
-.l-main-menu-playing .sub-container {
-  background: #ffc0c0 url('playing.png');
+.l-main-topmenu .front_menu-items.is-playing .sub-container {
+  background-color: #ffc0c0;
+  background-image: url('playing.png');
 }
 
-.l-main-menu-making .sub-container {
-  background: #a0e0e0 url('making.png');
+.l-main-topmenu .front_menu-items.is-making .sub-container {
+  background-color: #a0e0e0;
+  background-image: url('making.png');
 }
 
-.l-main-menu-about .sub-container {
-  background: #c0ffc0 url('about.png');
+.l-main-topmenu .front_menu-items.is-aboutme .sub-container {
+  background-color: #c0ffc0;
+  background-image: url('aboutme.png');
 }
 
-.l-main-menu-twitter .sub-container {
-  background: #c0c0ff url('twitter.png');
+.l-main-topmenu .front_menu-items.is-twitter .sub-container {
+  background-color: #c0c0ff;
+  background-image: url('twitter.png');
 }
 
-.l-main-menu-github .sub-container {
-  background: #d0d0d0 url('github.png');
+.l-main-topmenu .front_menu-items.is-github .sub-container {
+  background-color: #d0d0d0;
+  background-image: url('github.png');
 }
 
-.l-main-menu-blog .sub-container {
-  background: #e0e0a0 url('blog.png');
+.l-main-topmenu .front_menu-items.is-blog .sub-container {
+  background-color: #e0e0a0;
+  background-image: url('blog.png');
 }
 
-.l-main-menu .frontmenus-link {
+.l-main-topmenu .front_menu-items-link {
   display: block;
   height: 100%;
 }
 
-.l-main-menu .frontmenus-title {
+.l-main-topmenu .front_menu-items-title {
   bottom: 0;
   font-size: 1.4rem;
   margin: .5rem 0;
@@ -87,30 +94,26 @@ body {
   width: 100%;
 }
 
-.l-main-menu .frontmenus.has-submenu .frontmenus-title {
+.l-main-topmenu .front_menu-items.has-submenu .front_menu-items-title {
   width: 50%;
 }
 
-.l-main-menu .frontmenus-nav {
-  background: rgba(0, 0, 0, .125) url('frontmenus-nav_bg.png') repeat-x left bottom;
+.l-main-topmenu .front_menu-items-menu {
+  background: rgba(0, 0, 0, .125) url('front_menu-items-menu_bg.png') repeat-x left bottom;
   border-radius: 0 .25rem .25rem 0;
   padding: 1rem;
 }
 
-.l-main-menu .frontmenus-nav ul {
-  margin: 0;
-}
-
-.l-main-menu .frontmenus-nav li {
+.l-main-topmenu .front_menu-items-menu li {
   background-color: transparent;
   margin: .5rem 0;
 }
 
-.l-main-menu .frontmenus-nav li:hover {
+.l-main-topmenu .front_menu-items-menu li:hover {
   background-color: #e0e0e0;
 }
 
-.l-main-menu .frontmenus-nav a {
+.l-main-topmenu .front_menu-items-menu a {
   display: block;
   padding: .5rem;
 }
@@ -151,30 +154,19 @@ body {
   padding: 0 1rem;
 }
 
-.l-main-topic .linkbutton {
+.l-main-topic .link_button {
   display: inline-block;
   font-size: 1rem;
   padding: 0;
 }
 
-.l-main-topic .linkbutton a {
+.l-main-topic .link_button a {
   background-color: transparent;
   border: 0;
 }
 
-.l-main-topic .linkbutton a:hover {
+.l-main-topic .link_button a:hover {
   background-color: #c0c0c0;
-}
-
-.l-main-content .boxes {
-  background-color: #f0f0f0;
-  border: 2px solid #808080;
-}
-
-.l-main-content .boxes-title {
-  background-color: #c0c0c0;
-  border-bottom: 2px solid #808080;
-  font-size: 1.4rem;
 }
 
 /*
@@ -186,7 +178,7 @@ body {
 /* タブレットモード */
 @media(min-width: 32rem) {
   
-  .l-main-menu .frontmenus .sub-container {
+  .l-main-topmenu .front_menu-items .sub-container {
     background-size: 128px 128px;
     height: 192px;
   }

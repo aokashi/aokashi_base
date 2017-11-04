@@ -1,21 +1,25 @@
 {{ define "main" }}
 
   <main class="l-main">
-    <div class="l-wrap">
+    <div class="sub-wrap">
       <div class="l-main-content">
         <section class="l-main-contents">
-          <header class="l-main-contents-header block">
-            <h2 class="l-main-contents-header-title">{{ .Title }}</h2>
+          <header class="l-main-contents-header list">
+            <h2 class="list-title">{{ .Title }}</h2>
           </header>
-          <article class="l-main-contents-article l-doc">
-            <div class="box is-cols-2">{{ range .Data.Pages }}{{ $date := .Date.Format "2006-01-02" }}{{ if ne $date "0001-01-01" }}
-              <section class="boxes">
-                <h6 class="boxes-title"><a href="{{ if eq .File.BaseFileName "index" }}{{ replace .URL ".html" "/" }}{{ else }}{{ .URL }}{{ end }}" title="{{ .Title }}">{{ .Title }}</a></h6>
+          <article class="l-main-contents-article set-doc">
+            <div class="box is-2-cols">
+            {{ range .Data.Pages }}{{ $date := .Date.Format "2006-01-02" }}
+              {{ if ne $date "0001-01-01" }}
+              <section class="box-items">
+                <h6 class="box-items-title"><a href="{{ if eq .File.BaseFileName "index" }}{{ replace .URL ".html" "/" }}{{ else }}{{ .URL }}{{ end }}" title="{{ .Title }}">{{ .Title }}</a></h6>
                 <ul>
                   <li>{{ .Date.Format "2006年 01月 02日" }}</li>
                 </ul>
                 <p>{{ .Summary }}</p>
-              </section>{{ end }}{{ end }}
+              </section>
+              {{ end }}
+            {{ end }}
             </div>
           </article>
         </section>
