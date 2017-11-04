@@ -256,7 +256,7 @@
 .front_menu-items.has-submenu {
   flex-basis: 100%;
 }
-.front_menu-items.has-submenu .sub-container {
+.front_menu-items .sub-container {
   position: relative;
 }
   .front_menu-items-menu {

@@ -20,6 +20,7 @@ body {
 
 .sub-wrap {
   background-color: rgba(192, 192, 192, .5);
+  padding: .5rem;
 }
 
 .l-header-title {
@@ -49,35 +50,41 @@ body {
 }
 
 .l-main-topmenu .front_menu-items.is-playing .sub-container {
-  background: #ffc0c0 url('playing.png');
+  background-color: #ffc0c0;
+  background-image: url('playing.png');
 }
 
 .l-main-topmenu .front_menu-items.is-making .sub-container {
-  background: #a0e0e0 url('making.png');
+  background-color: #a0e0e0;
+  background-image: url('making.png');
 }
 
 .l-main-topmenu .front_menu-items.is-about .sub-container {
-  background: #c0ffc0 url('about.png');
+  background-color: #c0ffc0;
+  background-image: url('about.png');
 }
 
 .l-main-topmenu .front_menu-items.is-twitter .sub-container {
-  background: #c0c0ff url('twitter.png');
+  background-color: #c0c0ff;
+  background-image: url('twitter.png');
 }
 
 .l-main-topmenu .front_menu-items.is-github .sub-container {
-  background: #d0d0d0 url('github.png');
+  background-color: #d0d0d0;
+  background-image: url('github.png');
 }
 
 .l-main-topmenu .front_menu-items.is-blog .sub-container {
-  background: #e0e0a0 url('blog.png');
+  background-color: #e0e0a0;
+  background-image: url('blog.png');
 }
 
-.l-main-topmenu .frontmenu-items-link {
+.l-main-topmenu .front_menu-items-link {
   display: block;
   height: 100%;
 }
 
-.l-main-topmenu .frontmenu-items-title {
+.l-main-topmenu .front_menu-items-title {
   bottom: 0;
   font-size: 1.4rem;
   margin: .5rem 0;
@@ -87,12 +94,12 @@ body {
   width: 100%;
 }
 
-.l-main-topmenu .front_menu-items.has-submenu .frontmenu-items-title {
+.l-main-topmenu .front_menu-items.has-submenu .front_menu-items-title {
   width: 50%;
 }
 
 .l-main-topmenu .front_menu-items-menu {
-  background: rgba(0, 0, 0, .125) url('frontmenus-nav_bg.png') repeat-x left bottom;
+  background: rgba(0, 0, 0, .125) url('front_menu-items-menu_bg.png') repeat-x left bottom;
   border-radius: 0 .25rem .25rem 0;
   padding: 1rem;
 }
