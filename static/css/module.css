@@ -386,21 +386,34 @@
     flex: 0 0 calc((100% / 3) - .5rem);
   }
 
+  .intro.is-medium {
+    flex-flow: row nowrap;
+  }
+
+  .intro.is-medium .intro-icon {
+    flex: 0 0 auto;
+  }
+
+  .intro.is-medium .intro-description {
+    flex: 1 1 auto;
+    padding: 0 1rem;
+  }
+
 }
 
 /* PCモード */
 @media (min-width: 50rem) {
   
   /* 説明ボックスの分割はデスクトップPCモード以降で有効 */
-  .intro {
+  .intro.is-wide {
     flex-flow: row nowrap;
   }
 
-  .intro-icon {
+  .intro.is-wide .intro-icon {
     flex: 0 0 auto;
   }
 
-  .intro-description {
+  .intro.is-wide .intro-description {
     flex: 1 1 auto;
     padding: 0 1rem;
   }

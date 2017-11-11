@@ -1,0 +1,7 @@
+<div class="intro {{ with .Get "type" }}is-{{ . }}{{ else }}is-wide{{ end }}">
+  <img class="intro-icon" src="{{ .Get "src" }}" alt="{{ .Get "alt" }}"{{ with .Get "width" }} width="{{ . }}"{{ end }}{{ with .Get "height" }} height="{{ . }}"{{ end }}>
+  <section class="intro-description">
+    {{ with .Get "title" }}<h6 class="intro-items-title">{{ . }}</h6>{{ end }}
+    {{ .Inner }}
+  </section>
+</div>
