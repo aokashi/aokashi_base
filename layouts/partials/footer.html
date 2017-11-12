@@ -13,8 +13,8 @@
       <nav class="l-footer-social_menu social_menu">
         <ul>
           {{ if isset .Site.Params "blog" }}<li class="social_menu-items is-blog"><a href="{{ .Site.Params.blog }}">Blog</a></li>{{ end }}
-          {{ if isset .Site.Params "twitter" }}<li class="social_menu-items is-twitter"><a href="{{ .Site.Params.twitter }}">Twitter</a></li>{{ end }}
-          {{ if isset .Site.Params "github" }}<li class="social_menu-items is-github"><a href="{{ .Site.Params.github }}">GitHub</a></li>{{ end }}
+          {{ if isset .Site.Params "twitter" }}<li class="social_menu-items is-twitter"><a href="https://twitter.com/{{ .Site.Params.twitter }}">@{{ .Site.Params.twitter }}</a></li>{{ end }}
+          {{ if isset .Site.Params "github" }}<li class="social_menu-items is-github"><a href="https://github.com/{{ .Site.Params.github }}">{{ .Site.Params.github }}</a></li>{{ end }}
         </ul>
       </nav>
       <div class="l-footer-copyright">
