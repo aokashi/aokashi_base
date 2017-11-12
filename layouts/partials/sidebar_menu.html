@@ -5,7 +5,7 @@
       {{ if eq .Weight 1 }}
       <li class="menu-items is-top"><a href="{{ replace .URL ".html" "/" }}" title="{{ .Title }}">{{ .Title }}</a></li>
       {{ else if .IsPage }}
-      <li class="menu-items"><a href="{{ .URL }}" title="{{ .Title }}">{{ .Title }}</a></li>
+      <li class="menu-items"><a href="{{ with .Params.absURL }}{{ . }}{{ else }}{{ .URL }}{{ end }}" title="{{ .Title }}">{{ .Title }}</a></li>
       {{ end }}
     {{ end }}
     </ul>

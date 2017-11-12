@@ -11,9 +11,25 @@
               <p>{{ .Params.description }}</p>
             </div>
           </header>
+          <nav class="l-main-contents-menu box_menu is-2-cols">
+          {{ range (where .Site.Pages.ByWeight "Type" .Type) }}
+          {{ if and (.IsPage) (gt .Weight 1) }}
+            <section class="box_menu-items">
+              <a class="box_menu-items-link" href="{{ with .Params.absURL }}{{ . }}{{ else }}{{ .URL }}{{ end }}" title="{{ .Title }}">
+                <h6 class="box_menu-items-title">{{ .Title }}</h6>
+                {{ with .Params.description }}
+                  <p>{{ . }}</p>
+                {{ end }}
+              </a>
+            </section>
+          {{ end }}
+          {{ end }}
+          </nav>
+          <article class="l-main-contents-article set-doc">
 
 {{ .Content }}
 
+          </article>
         </section>
       </div>
     </div>
