@@ -121,6 +121,12 @@ img {
       padding: 1rem;
     }
 
+  .l-main-contents-menu .box_menu-items {
+    background-color: #fff;
+    border: 2px solid #c0c0c0;
+    padding: 1rem;
+  }
+
   /* サイドバーメニュー */
   .l-main-sidebar_menu {
     background-color: #60a0ff;

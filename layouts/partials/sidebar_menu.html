@@ -1,8 +1,8 @@
 <div class="sub-wrap is-left">
   <nav class="l-main-sidebar_menu menu">
     <ul>
-    {{ range (where .Site.Pages.ByWeight "Section" .Section) }}
-      {{ if eq .File.BaseFileName "index" }}
+    {{ range (where .Site.Pages.ByWeight "Type" .Type) }}
+      {{ if eq .Weight 1 }}
       <li class="menu-items is-top"><a href="{{ replace .URL ".html" "/" }}" title="{{ .Title }}">{{ .Title }}</a></li>
       {{ else if .IsPage }}
       <li class="menu-items"><a href="{{ .URL }}" title="{{ .Title }}">{{ .Title }}</a></li>

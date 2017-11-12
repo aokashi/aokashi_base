@@ -79,6 +79,7 @@
 /* .box + .intro */
 
 .box,
+.box_menu,
 .intro {
   display: flex;
   margin: 1rem 0;
@@ -86,17 +87,20 @@
 
 /* .box */
 
-.box {
+.box,
+.box_menu {
   flex-flow: row wrap;
   justify-content: space-between;
 }
 
-.box-items {
+.box-items,
+.box_menu-items {
   margin: .5rem 0;
   padding: .5rem;
 }
 
-.box-items-title {
+.box-items-title,
+.box_menu-items-title {
   margin: -.5rem -.5rem 1rem -.5rem;
   padding: .5rem;
 }
@@ -115,6 +119,16 @@
   .intro-items-title {
     margin: 0 -.5rem 0 -.5rem;
   }
+
+/* .box_menu */
+
+.box_menu-items-link {
+  display: block;
+}
+
+.box_menu-items-title {
+  font-size: 1rem;
+}
 
 /* スマートフォンでは2分割する横幅が足りないので分割しないままになる、mediaクエリー部分参照のこと */
 
@@ -207,7 +221,8 @@
 .menu a,
 .social_menu a,
 .front_menu a,
-.topicpath a {
+.topicpath a,
+.box_menu a {
   color: inherit;
   text-decoration: none;
 }
@@ -215,7 +230,8 @@
 .menu a:hover,
 .social_menu a:hover,
 .front_menu a:hover,
-.topicpath a:hover {
+.topicpath a:hover,
+.box_menu a:hover {
   text-decoration: underline;
 }
 
@@ -373,16 +389,19 @@
 /* タブレットモードとPCモード */
 @media (min-width: 32rem) {
 
-  .box.is-1-cols .box-items {
+  .box.is-1-cols .box-items,
+  .box_menu.is-1-cols .box_menu-items {
     flex: 0 0 100%;
   }
 
   /* ボックスの分割はタブレットモード以降で有効 */
-  .box.is-2-cols .box-items {
+  .box.is-2-cols .box-items,
+  .box_menu.is-2-cols .box_menu-items {
     flex: 0 0 calc(50% - .5rem);
   }
 
-  .box.is-3-cols .box-items {
+  .box.is-3-cols .box-items,
+  .box_menu.is-3-cols .box_menu-items {
     flex: 0 0 calc((100% / 3) - .5rem);
   }
 
