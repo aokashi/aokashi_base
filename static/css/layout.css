@@ -90,7 +90,7 @@ img {
   }
 
     .l-main-contents-header .list-title {
-      background-color: #c0c0c0;
+      background-color: #d0d0d0;
       color: #000080;
       font-size: 1.4rem;
       margin: 0;
@@ -106,7 +106,7 @@ img {
       }
 
     .l-main-contents-header .list-items {
-      background-color: #a0a0a0;
+      background-color: #e0e0e0;
       color: #000080;
     }
   
@@ -130,6 +130,11 @@ img {
     .l-main-contents-menu .box_menu-items {
       background-color: #fff;
       border: 2px solid #c0c0c0;
+    }
+
+    .l-main-contents-menu .box_menu-items-link {
+      background-color: #c0c0c0;
+      color: #000080;
     }
 
     .l-main-contents-menu .box_menu-items-title {
