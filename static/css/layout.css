@@ -57,6 +57,10 @@ img {
     margin: 0;
   }
 
+  .l-header-menu .menu-items {
+    white-space: nowrap;
+  }
+
   .l-header-menu .menu-items:hover {
     background-color: #808080;
   }
@@ -73,8 +77,8 @@ img {
   color: #404040;
 }
 
-  .is-page .l-main-content {
-    padding: 1rem .5rem;
+  .is-page .l-main-contents {
+    padding: 0 1rem;
   }
 
   .l-main-contents-header,
@@ -85,31 +89,29 @@ img {
     margin-right: -1rem;
   }
 
-  .l-main-contents-header.list {
-    background-color: #c0c0c0;
-  }
-
-    .l-main-contents-header.list .list-title {
+    .l-main-contents-header .list-title {
+      background-color: #c0c0c0;
       color: #000080;
       font-size: 1.4rem;
       margin: 0;
       padding: 1rem;
     }
 
-      .l-main-contents-header.list .list-title a {
+      .l-main-contents-header .list-title a {
         display: block;
         text-decoration: none;
       }
-      .l-main-contents-header.list .list-title a:hover {
+      .l-main-contents-header .list-title a:hover {
         text-decoration: underline;
       }
 
-    .l-main-contents-header.list .list-items {
+    .l-main-contents-header .list-items {
       background-color: #a0a0a0;
+      color: #000080;
     }
   
   .l-main-contents-header.has-image {
-    background-color: #c0c0c0;
+    background-color: transparent;
     background-repeat: no-repeat;
     background-position: 16px center;
     margin-top: 0;
@@ -118,13 +120,22 @@ img {
   }
 
     .l-main-contents-header.has-image .list-items {
-      background-color: transparent;
+      height: 100%;
     }
 
-  .l-main-contents-menu .box_menu-items {
-    background-color: #fff;
-    border: 2px solid #c0c0c0;
-    padding: 1rem;
+  .l-main-contents-menu {
+    padding: .5rem 0;
+  }
+
+    .l-main-contents-menu .box_menu-items {
+      background-color: #fff;
+      border: 2px solid #c0c0c0;
+      padding: 1rem;
+    }
+  
+  /* .set-doc の要素なので、周りの要素に影響を受けないように padding を設定しましょう */
+  .l-main-contents-article {
+    padding: .5rem 0;
   }
 
   /* サイドバーメニュー */
@@ -234,10 +245,6 @@ img {
 /* タブレットモード */
 @media(min-width: 32rem){
 
-  .is-page .l-main-content {
-    padding: 1rem;
-  }
-
   /* サブメニューはタブレットモードになると1行に2項目が表示される */
   .l-main-sidebar_menu ul {
     display: flex;
@@ -260,7 +267,7 @@ img {
 
   .sub-wrap {
     margin: 0 auto;
-    width: 47rem; /* 47 = 50 - (1 * 2 + 1) ... 余白分2remとスクロールバーのスペース確保分1rem */
+    width: calc(50rem - (100vw - 100%)); /* 100vw - 100% はスクロールバーの幅 */
   }
 
 }
@@ -300,7 +307,6 @@ img {
     }
 
     .l-main .sub-wrap.is-center {
-      flex: 0 0 47rem;
       order: 2;
     }
 
