@@ -1,7 +1,7 @@
 {{ define "main" }}
 
   <main class="l-main">
-    <div class="sub-wrap">
+    <div class="sub-wrap is-center">
       <div class="l-main-content">
         <section class="l-main-contents">
           <header class="l-main-contents-header list has-image is-{{ .Type }}">
@@ -32,6 +32,12 @@
         </section>
       </div>
     </div>
+
+{{ partial "sidebar_menu.html" . }}
+
+<div class="sub-wrap is-right">
+</div>
+
   </main>
 
 {{ end }}
