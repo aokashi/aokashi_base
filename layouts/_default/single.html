@@ -6,11 +6,9 @@
         <section class="l-main-contents">
           <header class="l-main-contents-header list">
             <h2 class="list-title">{{ .Title }}</h2>
-          {{ if ne .File.BaseFileName "index" }}
             <nav class="list-items is-link">
-              <a href="./" title="{{ .Section }}">戻る</a>
+              <a href="/{{ .Type }}" title="{{ .Type }}">戻る</a>
             </nav>
-          {{ end }}
           </header>
           <article class="l-main-contents-article set-doc">
 
