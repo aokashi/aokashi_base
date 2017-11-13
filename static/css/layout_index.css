@@ -27,10 +27,6 @@ body {
   text-align: center;
 }
 
-.l-main-topmenu .front_menu-items {
-  padding: .5rem;
-}
-
 .l-main-topmenu .front_menu-items .sub-container {
   background-repeat: no-repeat;
   background-position: 50% 25%;
@@ -38,6 +34,7 @@ body {
   border: 2px solid transparent;
   border-radius: .25rem;
   height: 42vw;
+  margin: .5rem;
   padding: .25rem;
 }
 

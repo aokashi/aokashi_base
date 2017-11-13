@@ -261,7 +261,9 @@ img {
   }
 
     .l-main-sidebar_menu .menu-items {
-      flex: 0 0 calc(50% - .5rem);
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: calc(50% - .5rem);
     }
 
     .l-main-sidebar_menu .menu-items.is-top {
@@ -327,8 +329,11 @@ img {
     width: 14rem;
   }
 
-  .l-main-sidebar_menu { /* display: flex; と指定した .l-wrap.is-left の子要素 */
-    flex: 0 0 14rem;
+  .l-main-sidebar_menu { /* display: flex; と指定した .sub-wrap.is-left の子要素 */
+    box-sizing: content-box;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(14rem - 2rem); /* 2rem は左右の余白1rem * 2 */
   }
 
   .l-main-sidebar_menu .menu-items {
