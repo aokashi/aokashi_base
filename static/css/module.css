@@ -101,7 +101,7 @@
 
 .box-items-title,
 .box_menu-items-title {
-  margin: -.5rem -.5rem 1rem -.5rem;
+  margin: 0;
   padding: .5rem;
 }
 
@@ -128,6 +128,11 @@
 
 .box_menu-items-title {
   font-size: 1rem;
+}
+
+.box_menu-items-image {
+  display: block;
+  margin: 0 auto;
 }
 
 /* スマートフォンでは2分割する横幅が足りないので分割しないままになる、mediaクエリー部分参照のこと */

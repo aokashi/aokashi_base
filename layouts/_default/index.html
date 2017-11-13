@@ -15,11 +15,14 @@
           {{ if and (.IsPage) (gt .Weight 1) }}
             <section class="box_menu-items">
               <a class="box_menu-items-link" href="{{ with .Params.absURL }}{{ . }}{{ else }}{{ .URL }}{{ end }}" title="{{ .Title }}">
+              {{ if isset .Params "image" }}
+                <img class="box_menu-items-image" src="{{ .Params.image }}" alt="{{ .Title }}">
+              {{ end }}
                 <h6 class="box_menu-items-title">{{ .Title }}</h6>
-                {{ with .Params.description }}
-                  <p>{{ . }}</p>
-                {{ end }}
               </a>
+            {{ with .Params.description }}
+              <p>{{ . }}</p>
+            {{ end }}
             </section>
           {{ end }}
           {{ end }}

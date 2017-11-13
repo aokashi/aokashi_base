@@ -132,6 +132,10 @@ img {
       border: 2px solid #c0c0c0;
       padding: 1rem;
     }
+
+    .l-main-contents-menu .box_menu-items-title {
+      text-align: center;
+    }
   
   /* .set-doc の要素なので、周りの要素に影響を受けないように padding を設定しましょう */
   .l-main-contents-article {
