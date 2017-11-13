@@ -106,19 +106,19 @@ img {
 
     .l-main-contents-header.list .list-items {
       background-color: #a0a0a0;
-      color: #000080;
     }
   
-  .l-main-contents-header.intro {
+  .l-main-contents-header.has-image {
     background-color: #c0c0c0;
+    background-repeat: no-repeat;
+    background-position: 16px center;
     margin-top: 0;
-    padding: 1rem;
+    min-height: 160px; /* 160 = 128 + (16 * 2) */
+    padding: 0 0 0 160px;
   }
 
-    .l-main-contents-header.intro .intro-items-title {
-      color: #000080;
-      font-size: 1.2rem;
-      padding: 1rem;
+    .l-main-contents-header.has-image .list-items {
+      background-color: transparent;
     }
 
   .l-main-contents-menu .box_menu-items {

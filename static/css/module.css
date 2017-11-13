@@ -138,6 +138,7 @@
   .list-items > a,
   .list-items > p,
   .list-items > time {
+    margin: 0;
     padding: .5rem 1rem;
   }
 
