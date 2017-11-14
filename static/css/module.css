@@ -108,6 +108,11 @@
   padding: .5rem;
 }
 
+.box-items-image {
+  display: block;
+  margin: 0 auto;
+}
+
 .box_menu-items-description {
   margin: 0;
   padding: 1rem;
