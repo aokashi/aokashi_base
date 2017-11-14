@@ -1,4 +1,5 @@
 <div class="sub-wrap is-left">
+  {{ if ne .Weight 0 }}
   <nav class="l-main-sidebar_menu menu">
     <ul>
     {{ range (where .Site.Pages.ByWeight "Type" .Type) }}
@@ -10,4 +11,5 @@
     {{ end }}
     </ul>
   </nav>
+  {{ end }}
 </div>
