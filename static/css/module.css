@@ -180,24 +180,25 @@
   background-repeat: no-repeat;
   background-position: .5rem center;
   background-size: 48px 48px;
+  border-radius: .5rem;
   min-height: 64px; /* 64pxは48pxに余白分8pxを2つ足した値 */
   padding: .5rem .5rem .5rem 64px;
 }
 .note.is-notice {
-  background-color: #e0e080;
-  background-image: url('note-is-notice.png');
-  border: 2px solid #808000;
+  background-color: #ffff80;
+  background-image: url('note-notice.png');
+  border: 2px solid #c0c000;
   color: #404000;
 }
 .note.is-info {
   background-color: #80e0e0;
-  background-image: url('note-is-info.png');
-  border: 2px solid #004080;
+  background-image: url('note-info.png');
+  border: 2px solid #00c0c0;
   color: #000080;
 }
 .note.is-warn {
-  background-color: #f0a0a0;
-  background-image: url('note-is-warn.png');
+  background-color: #ffa0a0;
+  background-image: url('note-warn.png');
   border: 2px solid #c04040;
   color: #400000;
 }
