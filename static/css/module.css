@@ -420,15 +420,22 @@
 
   /* ボックスの分割はタブレットモード以降で有効 */
   .box.is-2-cols .box-items,
-  .box_menu.is-2-cols .box_menu-items {
-    box-sizing: content-box;
-    flex-basis: calc(50% - 1.5rem); /* .5rem + 1rem = 1.5rem */
-  }
-
   .box.is-3-cols .box-items,
+  .box_menu.is-2-cols .box_menu-items,
   .box_menu.is-3-cols .box_menu-items {
     box-sizing: content-box;
+  }
+  .box.is-2-cols .box-items {
+    flex-basis: calc(50% - 1.5rem); /* .5rem + 1rem = 1.5rem */
+  }
+  .box_menu.is-2-cols .box_menu-items {
+    flex-basis: calc(50% - .5rem);
+  }
+  .box.is-3-cols .box-items {
     flex-basis: calc((100% / 3) - 1.5rem);
+  }
+  .box_menu.is-3-cols .box_menu-items {
+    flex-basis: calc((100% / 3) - .5rem);
   }
 
   .intro.is-medium {
