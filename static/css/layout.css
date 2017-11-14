@@ -29,9 +29,6 @@ img {
 .is-page .l-header {
   border-bottom: 2px solid #000080;
 }
-.l-header .sub-wrap {
-  background-color: rgba(192, 192, 192, 0.5);
-}
 
   .l-header-title {
     font-size: 1.8rem;
@@ -322,18 +319,23 @@ img {
     justify-content: center;
   }
 
-    .l-main .sub-wrap.is-left {
+    .is-page .l-main .sub-wrap.is-left {
       display: flex; /* Safariでメニューを縦いっぱいに表示する */
       flex: 1 0 14rem;
       flex-flow: row wrap; /* 万が一のために余計な要素は下に逃す */
       order: 1;
     }
 
-    .l-main .sub-wrap.is-center {
+    .is-page .l-main .sub-wrap.is-center {
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: calc(50rem - (100vw - 100%));
+      margin: 0;
       order: 2;
+      width: auto;
     }
 
-    .l-main .sub-wrap.is-right {
+    .is-page .l-main .sub-wrap.is-right {
       flex: 1 0 14rem;
       order: 3;
     }
