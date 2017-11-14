@@ -61,8 +61,12 @@ img {
     white-space: nowrap;
   }
 
+  .l-header-menu .menu-items.is-current {
+    border-bottom: 2px solid #000080;
+  }
+
   .l-header-menu .menu-items:hover {
-    background-color: #808080;
+    background-color: #909090;
   }
 
     .l-header-menu .menu-items a {

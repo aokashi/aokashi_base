@@ -5,8 +5,10 @@
       </h1>
       <nav class="l-header-menu menu">
         <ul>
+        {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
-          <li class="menu-items is-{{ .Identifier }}"><a href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a></li>
+          {{ $pageType := lower .Name }}
+          <li class="menu-items is-{{ .Identifier }}{{ if eq $currentPage.Type $pageType }} is-current{{ end }}"><a href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a></li>
         {{ end }}
         </ul>
       </nav>
