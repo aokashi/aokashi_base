@@ -58,11 +58,12 @@ img {
   }
 
   .l-header-menu .menu-items {
+    border-top: 2px solid #909090;
     white-space: nowrap;
   }
 
   .l-header-menu .menu-items.is-current {
-    border-bottom: 2px solid #000080;
+    border-color: #000080;
   }
 
   .l-header-menu .menu-items:hover {
@@ -224,20 +225,28 @@ img {
   .l-footer-social_menu > ul {
     padding: .5rem 0;
   }
-
+  
+  .l-footer-menu .menu-items,
+  .l-footer-social_menu .social_menu-items {
+    display: inline-block;
+  }
+  
   .l-footer-menu .menu-items {
     border-width: 0 1px 0 0;
     border-style: solid;
     border-color: #c0c0c0;
-    display: inline-block;
-  }
-
-  .l-footer-menu .menu-items > a {
     padding: 0 1rem;
   }
-
   .l-footer-menu .menu-items:first-child {
     border-left-width: 1px;
+  }
+
+  .l-footer-social_menu .social_menu-items {
+    margin: 0 .5rem;
+  }
+
+  .l-footer-social_menu .social_menu-items.is-github {
+    background-image: url('social_menu-items-github_light.png');
   }
 
   .l-footer-copyright {

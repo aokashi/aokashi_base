@@ -259,19 +259,17 @@
   background-repeat: no-repeat;
   background-position: .25em center;
   background-size: 24px 24px;
-  display: inline-block;
-  margin: 0 .5rem;
 }
 .social_menu-items.is-blog {
-  background-image: url('socialmenus_blog.png');
+  background-image: url('social_menu-items-blog.png');
 }
 .social_menu-items.is-twitter {
-  background-image: url('socialmenus_twitter.png');
+  background-image: url('social_menu-items-twitter.png');
   font-family: 'Helvetica', sans-serif;
   font-weight: bold;
 }
 .social_menu-items.is-github {
-  background-image: url('socialmenus_github.png');
+  background-image: url('social_menu-items-github.png');
   font-weight: bold;
 }
 
