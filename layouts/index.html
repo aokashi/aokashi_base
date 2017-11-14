@@ -47,6 +47,13 @@
 {{ define "footer" }}
   <footer class="l-footer">
     <div class="sub-wrap is-center">
+      <div class="l-footer-menu menu">
+        <ul>
+        {{ range .Site.Menus.footer }}
+          <li class="menu-items"><a href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a></li>
+        {{ end }}
+        </ul>
+      </div>
       <div class="l-footer-copyright">
         <p>{{ .Site.Copyright }}</p>
       </div>
