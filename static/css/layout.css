@@ -45,13 +45,13 @@ img {
     overflow-y: hidden;
     text-align: center;
   }
-
+  
   .l-header-menu > ul {
     align-items: flex-start;
     justify-content: flex-start;
     display: inline-flex;
     flex-flow: row nowrap;
-    margin: 0;
+    margin: 0 auto;
   }
 
   .l-header-menu .menu-items {
@@ -75,7 +75,7 @@ img {
 /* .l-main */
 
 .is-page .l-main {
-  background: #fff url('main_background.png') repeat 0 0;
+  background: #fff url('main-background.png') repeat 0 0;
   color: #404040;
 }
 
@@ -260,8 +260,41 @@ img {
  * -----------
  */
 
+/* スマートフォン専用 */
+@media(max-width: 32rem) {
+
+  .l-header {
+    position: relative;
+  }
+  .l-header:before,
+  .l-header:after {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    bottom: 0;
+    height: 64px;
+    position: absolute;
+    width: 24px;
+  }
+  .l-header:before {
+    background-image: url('header_menu-scroll_arrow-left.png');
+    content: "";
+    left: 0;
+  }
+  .l-header:after {
+    background-image: url('header_menu-scroll_arrow-right.png');
+    content: "";
+    right: 0;
+  }
+
+  .l-header-menu {
+    margin: 0 24px;
+  }
+
+}
+
 /* タブレットモード */
-@media(min-width: 32rem){
+@media(min-width: 32rem) {
 
   /* サブメニューはタブレットモードになると1行に2項目が表示される */
   .l-main-sidebar_menu ul {
@@ -283,7 +316,7 @@ img {
 }
 
 /* デスクトップPCモード */
-@media(min-width: 50rem){
+@media(min-width: 50rem) {
 
   .sub-wrap {
     margin: 0 auto;
@@ -292,7 +325,7 @@ img {
 
 }
 
-@media(min-width: 78rem){ /* 78 = 50 + 14 * 2 */
+@media(min-width: 78rem) { /* 78 = 50 + 14 * 2 */
 
   .is-page .l-header .sub-wrap {
     position: relative;
