@@ -263,31 +263,30 @@ img {
 /* スマートフォン専用 */
 @media(max-width: 32rem) {
 
-  .l-header {
+  .is-page .l-header {
     position: relative;
   }
-  .l-header:before,
-  .l-header:after {
+  .is-page .l-header:before,
+  .is-page .l-header:after {
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center center;
     bottom: 0;
+    content: "";
     height: 64px;
     position: absolute;
     width: 24px;
   }
-  .l-header:before {
+  .is-page .l-header:before {
     background-image: url('header_menu-scroll_arrow-left.png');
-    content: "";
     left: 0;
   }
-  .l-header:after {
+  .is-page .l-header:after {
     background-image: url('header_menu-scroll_arrow-right.png');
-    content: "";
     right: 0;
   }
 
-  .l-header-menu {
+  .is-page .l-header-menu {
     margin: 0 24px;
   }
 
