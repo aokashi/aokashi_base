@@ -12,11 +12,11 @@
           </header>
           <nav class="l-main-contents-menu box_menu is-2-cols">
           {{ range (where .Site.Pages.ByWeight "Type" .Type) }}
-          {{ if and (.IsPage) (gt .Weight 1) }}
+          {{ if or (ne .Section .Type) (and (.IsPage) (ne .File.BaseFileName "index")) }}
             <section class="box_menu-items">
               <a class="box_menu-items-link" href="{{ with .Params.absURL }}{{ . }}{{ else }}{{ .URL }}{{ end }}" title="{{ .Title }}">
               {{ if isset .Params "image" }}
-                <img class="box_menu-items-image" src="{{ .Params.image }}" alt="{{ .Title }}">
+                <img class="box_menu-items-image" src="{{ .Site.BaseURL }}{{ .Params.image }}" alt="{{ .Title }}">
               {{ end }}
                 <h6 class="box_menu-items-title">{{ .Title }}</h6>
               </a>

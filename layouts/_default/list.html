@@ -9,8 +9,7 @@
           </header>
           <div class="l-main-contents-menu box_menu is-2-cols">
           {{ range .Data.Pages }}
-          {{ $date := .Date.Format "2006-01-02" }}
-          {{ if ne $date "0001-01-01" }}
+          {{ if and (.IsPage) (ne .File.BaseFileName "index") }}
             <section class="box_menu-items">
               <a class="box_menu-items-link" href="{{ if eq .File.BaseFileName "index" }}{{ replace .URL ".html" "/" }}{{ else }}{{ .URL }}{{ end }}" title="{{ .Title }}">
                 <h6 class="box_menu-items-title">{{ .Title }}</h6>

@@ -6,11 +6,13 @@
         <section class="l-main-contents">
           <header class="l-main-contents-header list">
             <h2 class="list-title">{{ .Title }}</h2>
-          {{ if ne .Weight 0 }}
             <nav class="list-items is-link">
-              <a href="/{{ .Type }}" title="{{ .Type }}">戻る</a>
+            {{ if ne .Type "page" }}
+              <a href="{{ .Site.BaseURL }}{{ .Type }}/" title="{{ .Type }}">戻る</a>
+            {{ else }}
+              <a href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}">戻る</a>
+            {{ end }}
             </nav>
-          {{ end }}
           </header>
           <article class="l-main-contents-article set-doc">
 

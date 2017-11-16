@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{ if or (isset .Params "description") (isset .Site.Params "description") }}
+  <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.description }}{{ end }}">
+{{ end }}
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   {{ .Hugo.Generator }}
   <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}img/aokashihome_icon.png">
