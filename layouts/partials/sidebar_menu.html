@@ -1,0 +1,15 @@
+<div class="sub-wrap is-left">
+{{ if ne .Weight 0 }}
+  <nav class="l-main-sidebar_menu menu">
+    <ul>
+    {{ range (where .Site.Pages.ByWeight "Type" .Type) }}
+      {{ if and (eq .Section .Type) (eq .File.BaseFileName "index") }}
+      <li class="menu-items is-top"><a href="{{ replace .URL ".html" "/" }}" title="{{ .Title }}">{{ .Title }}</a></li>
+      {{ else if .IsPage }}
+      <li class="menu-items"><a href="{{ with .Params.absURL }}{{ . }}{{ else }}{{ .URL }}{{ end }}" title="{{ .Title }}">{{ .Title }}</a></li>
+      {{ end }}
+    {{ end }}
+    </ul>
+  </nav>
+{{ end }}
+</div>

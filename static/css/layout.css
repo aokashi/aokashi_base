@@ -1,0 +1,390 @@
+@charset "utf-8";
+
+/*
+ * -----------
+ * Layout Rule
+ * -----------
+ */
+
+body {
+  background-color: #c0c0c0;
+  color: #000;
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "sans-serif";
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.sub-wrap {
+  margin: 0;
+}
+
+/* .l-header */
+
+.l-header {
+  color: #000080;
+}
+.is-page .l-header {
+  border-bottom: 2px solid #000080;
+}
+
+  .l-header-title {
+    font-size: 1.8rem;
+    margin: 0;
+    text-align: center;
+  }
+  .is-page .l-header-title {
+    height: 56px;
+    margin: 1rem 0;
+  }
+
+  .l-header-menu {
+    overflow-x: auto;
+    overflow-y: hidden;
+    text-align: center;
+  }
+  
+  .l-header-menu > ul {
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    margin: 0 auto;
+  }
+
+  .l-header-menu .menu-items {
+    border-top: 2px solid #909090;
+    white-space: nowrap;
+  }
+
+  .l-header-menu .menu-items.is-current {
+    border-color: #000080;
+  }
+
+  .l-header-menu .menu-items:hover {
+    background-color: #909090;
+  }
+
+    .l-header-menu .menu-items a {
+      display: block;
+      padding: 1rem;
+    }
+
+/* .l-main */
+
+.is-page .l-main {
+  background: #fff url('main-background.png') repeat 0 0;
+  color: #404040;
+}
+
+  .is-page .l-main-contents {
+    padding: 0 1rem;
+  }
+
+  .l-main-contents-header,
+  .l-main-contents h3,
+  .l-main-contents h4,
+  .l-main-contents h5 {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+    .l-main-contents-header .list-title {
+      background-color: #d0d0d0;
+      color: #000080;
+      font-size: 1.4rem;
+      margin: 0;
+      padding: 1rem;
+    }
+
+      .l-main-contents-header .list-title a {
+        display: block;
+        text-decoration: none;
+      }
+      .l-main-contents-header .list-title a:hover {
+        text-decoration: underline;
+      }
+
+    .l-main-contents-header .list-items {
+      background-color: #e0e0e0;
+      color: #000080;
+    }
+  
+  .l-main-contents-header.has-image {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 16px center;
+    margin-top: 0;
+    min-height: 160px; /* 160 = 128 + (16 * 2) */
+    padding: 0 0 0 160px;
+  }
+
+    .l-main-contents-header.has-image .list-items {
+      height: 100%;
+    }
+
+  .l-main-contents-menu {
+    padding: .5rem 0;
+  }
+
+    .l-main-contents-menu .box_menu-items {
+      background-color: #fff;
+      border: 2px solid #c0c0c0;
+    }
+
+    .l-main-contents-menu .box_menu-items-link {
+      background-color: #c0c0c0;
+      color: #000080;
+    }
+
+    .l-main-contents-menu .box_menu-items-title {
+      text-align: center;
+    }
+  
+  /* .set-doc の要素なので、周りの要素に影響を受けないように padding を設定しましょう */
+  .l-main-contents-doc {
+    padding: .5rem 0;
+  }
+
+  /* サイドバーメニュー */
+  .l-main-sidebar_menu {
+    background-color: #60a0ff;
+    padding: 1rem;
+  }
+
+    .l-main-sidebar_menu ul {
+      margin: 0;
+    }
+
+    .l-main-sidebar_menu .menu-items {
+      background-color: #c0c0c0;
+      margin-bottom: .5rem;
+    }
+
+    .l-main-sidebar_menu .menu-items.is-top {
+      font-weight: bold;
+    }
+
+    .l-main-sidebar_menu a {
+      color: inherit;
+      display: block;
+      padding: .5rem;
+      text-decoration: none;
+    }
+
+  /* サイドバー(目次) */
+  .l-main-toc {
+    padding: 1rem;
+  }
+
+    .l-main-toc-title {
+      border-bottom: 1px solid #808080;
+      font-size: 1rem;
+      padding: .5rem;
+    }
+
+    .l-main-toc ul {
+      padding-left: 1rem;
+    }
+
+    .l-main-toc > nav > ul,
+    .l-main-toc > nav > ul > li > ul {
+      padding: 0; /* Hugoの仕様上、このような記述に... */
+    }
+
+    .l-main-toc li {
+      line-height: 1.25;
+      margin: .5rem 0;
+    }
+
+/* .l-footer */
+
+.l-footer {
+  font-size: .8rem;
+}
+.is-page .l-footer {
+  background-color: #404040;
+  border-top: 2px solid #000080;
+  color: #fff;
+}
+.is-page .l-footer .sub-wrap {
+  padding: .5rem;
+}
+
+  .l-footer-menu,
+  .l-footer-social_menu {
+    text-align: center;
+  }
+
+  .l-footer-menu > ul,
+  .l-footer-social_menu > ul {
+    padding: .5rem 0;
+  }
+  
+  .l-footer-menu .menu-items,
+  .l-footer-social_menu .social_menu-items {
+    display: inline-block;
+  }
+  
+  .l-footer-menu .menu-items {
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-color: #c0c0c0;
+    padding: 0 1rem;
+  }
+  .l-footer-menu .menu-items:first-child {
+    border-left-width: 1px;
+  }
+
+  .l-footer-social_menu .social_menu-items {
+    margin: 0 .5rem;
+  }
+
+  .l-footer-social_menu .social_menu-items.is-github {
+    background-image: url('social_menu-items-github_light.png');
+  }
+
+  .l-footer-copyright {
+    text-align: center;
+  }
+
+  .l-footer-social_menu .social_menu-items:hover {
+    background-color: #808080;
+  }
+
+/*
+ * -----------
+ * Media Query
+ * -----------
+ */
+
+/* スマートフォン専用 */
+@media(max-width: 32rem) {
+
+  .is-page .l-header {
+    position: relative;
+  }
+  .is-page .l-header:before,
+  .is-page .l-header:after {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    bottom: 0;
+    content: "";
+    height: 64px;
+    position: absolute;
+    width: 24px;
+  }
+  .is-page .l-header:before {
+    background-image: url('header_menu-scroll_arrow-left.png');
+    left: 0;
+  }
+  .is-page .l-header:after {
+    background-image: url('header_menu-scroll_arrow-right.png');
+    right: 0;
+  }
+
+  .is-page .l-header-menu {
+    margin: 0 24px;
+  }
+
+}
+
+/* タブレットモード */
+@media(min-width: 32rem) {
+
+  /* サブメニューはタブレットモードになると1行に2項目が表示される */
+  .l-main-sidebar_menu ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+    .l-main-sidebar_menu .menu-items {
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: calc(50% - .5rem);
+    }
+
+    .l-main-sidebar_menu .menu-items.is-top {
+      flex: 0 0 100%;
+    }
+
+}
+
+/* デスクトップPCモード */
+@media(min-width: 50rem) {
+
+  .sub-wrap {
+    margin: 0 auto;
+    width: calc(50rem - (100vw - 100%)); /* 100vw - 100% はスクロールバーの幅 */
+  }
+
+}
+
+@media(min-width: 78rem) { /* 78 = 50 + 14 * 2 */
+
+  .is-page .l-header .sub-wrap {
+    position: relative;
+  }
+
+    .l-header-title {
+      text-align: left;
+    }
+
+    .l-header-menu {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+      .l-header-menu .menu-items a {
+        padding: 1rem .5rem;
+      }
+
+  .is-page .l-main {
+    align-items: stretch;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+
+    .is-page .l-main .sub-wrap.is-left {
+      display: flex; /* Safariでメニューを縦いっぱいに表示する */
+      flex: 1 0 14rem;
+      flex-flow: row wrap; /* 万が一のために余計な要素は下に逃す */
+      order: 1;
+    }
+
+    .is-page .l-main .sub-wrap.is-center {
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: calc(50rem - (100vw - 100%));
+      margin: 0;
+      order: 2;
+      width: auto;
+    }
+
+    .is-page .l-main .sub-wrap.is-right {
+      flex: 1 0 14rem;
+      order: 3;
+    }
+
+  .l-main-toc {
+    width: 14rem;
+  }
+
+  .l-main-sidebar_menu { /* display: flex; と指定した .sub-wrap.is-left の子要素 */
+    box-sizing: content-box;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(14rem - 2rem); /* 2rem は左右の余白1rem * 2 */
+  }
+
+  .l-main-sidebar_menu .menu-items {
+    flex: 0 0 100%;
+  }
+
+}

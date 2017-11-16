@@ -1,0 +1,46 @@
+{{ define "main" }}
+
+  <main class="l-main">
+    <div class="sub-wrap is-center">
+      <div class="l-main-content">
+        <article class="l-main-contents">
+          <header class="l-main-contents-header list has-image is-{{ .Type }}">
+            <h2 class="list-title">{{ .Title }}</h2>
+            <div class="list-items">
+              <p>{{ .Params.description }}</p>
+            </div>
+          </header>
+          <nav class="l-main-contents-menu box_menu is-2-cols">
+          {{ range (where .Site.Pages.ByWeight "Type" .Type) }}
+          {{ if or (ne .Section .Type) (and (.IsPage) (ne .File.BaseFileName "index")) }}
+            <section class="box_menu-items">
+              <a class="box_menu-items-link" href="{{ with .Params.absURL }}{{ . }}{{ else }}{{ .URL }}{{ end }}" title="{{ .Title }}">
+              {{ if isset .Params "image" }}
+                <img class="box_menu-items-image" src="{{ .Site.BaseURL }}{{ .Params.image }}" alt="{{ .Title }}">
+              {{ end }}
+                <h6 class="box_menu-items-title">{{ .Title }}</h6>
+              </a>
+            {{ with .Params.description }}
+              <p class="box_menu-items-description">{{ . }}</p>
+            {{ end }}
+            </section>
+          {{ end }}
+          {{ end }}
+          </nav>
+          <div class="l-main-contents-doc set-doc">
+
+{{ .Content }}
+
+          </div>
+        </article>
+      </div>
+    </div>
+
+{{ partial "sidebar_menu.html" . }}
+
+<div class="sub-wrap is-right">
+</div>
+
+  </main>
+
+{{ end }}

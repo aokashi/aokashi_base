@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+/* トップページ専用レイアウト */
+
+html,
+body {
+  min-height: 100vh;
+}
+
+html {
+  background: #c0c0c0 linear-gradient(to bottom, #808080, #c0c0c0);
+}
+
+body {
+  background: transparent url('body_bg.png') repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sub-wrap {
+  background-color: rgba(192, 192, 192, .5);
+  padding: .5rem;
+}
+
+.l-header-title {
+  text-align: center;
+}
+
+.l-main-topmenu .front_menu-items .sub-container {
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+  background-size: 28vw 28vw;
+  border: 2px solid transparent;
+  border-radius: .25rem;
+  height: 42vw;
+  margin: .5rem;
+  padding: .25rem;
+}
+
+.l-main-topmenu .front_menu-items:hover .sub-container {
+  border-color: #404040;
+}
+
+.l-main-topmenu .front_menu-items.has-submenu .sub-container {
+  background-position-x: calc(25% - (128px / 4));
+}
+
+.l-main-topmenu .front_menu-items-link {
+  display: block;
+  height: 100%;
+}
+
+.l-main-topmenu .front_menu-items-title {
+  bottom: 0;
+  font-size: 1rem;
+  margin: .5rem 0;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.l-main-topmenu .front_menu-items.has-submenu .front_menu-items-title {
+  width: 50%;
+}
+
+.l-main-topmenu .front_menu-items-menu {
+  background: rgba(0, 0, 0, .125) url('front_menu-items-menu_bg.png') repeat-x left bottom;
+  border-radius: 0 .25rem .25rem 0;
+  padding: .5rem 1rem;
+}
+
+.l-main-topmenu .front_menu-items-menu li {
+  background-color: transparent;
+}
+
+.l-main-topmenu .front_menu-items-menu li:hover {
+  background-color: #e0e0e0;
+}
+
+.l-main-topmenu .front_menu-items-menu a {
+  display: block;
+  padding: .5rem;
+}
+
+.l-main-topic {
+  background-color: #fff;
+  border-top: 4px solid #000080;
+  display: flex;
+  flex-direction: column;
+  margin: .5rem;
+}
+
+.l-main-topic .topic-title {
+  background-color: rgba(0, 0, 0, .5);
+  color: #fff;
+}
+
+.l-main-topic .topic-title-text {
+  font-size: 1rem;
+  margin: .5rem 1rem;
+}
+
+.l-main-topic .topic-content {
+  flex: 1 1 auto;
+}
+
+.l-main-topic .topic-list {
+  list-style: none;
+  padding: 0 1rem;
+}
+
+.l-main-topic .topic-list li:first-child {
+  font-size: 1.4rem;
+}
+
+.l-main-topic .topic-footer {
+  background-color: #e0e0e0;
+  padding: 0 1rem;
+}
+
+.l-main-topic .link_button {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.l-main-topic .link_button a {
+  background-color: transparent;
+  border: 0;
+}
+
+.l-main-topic .link_button a:hover {
+  background-color: #c0c0c0;
+}
+
+/*
+ * -----------
+ * Media Query
+ * -----------
+ */
+
+/* タブレットモード */
+@media(min-width: 32rem) {
+  
+  .l-main-topmenu .front_menu-items .sub-container {
+    background-size: 128px 128px;
+    height: 192px;
+  }
+
+  .l-main-topic {
+    flex-direction: row;
+  }
+
+  .l-main-topic .topic-title {
+    flex: 0 0 96px;
+  }
+
+  .l-main-topic .topic-title-text {
+    margin: 1rem;
+    text-align: center;
+  }
+
+}
