@@ -3,11 +3,11 @@
   <main class="l-main">
     <div class="sub-wrap is-center">
       <div class="l-main-content">
-        <section class="l-main-contents">
+        <article class="l-main-contents">
           <header class="l-main-contents-header list">
             <h2 class="list-title">{{ .Title }}</h2>
           </header>
-          <div class="l-main-contents-menu box_menu is-2-cols">
+          <nav class="l-main-contents-menu box_menu is-2-cols">
           {{ range .Data.Pages }}
           {{ if and (.IsPage) (ne .File.BaseFileName "index") }}
             <section class="box_menu-items">
@@ -21,8 +21,8 @@
             </section>
           {{ end }}
           {{ end }}
-          </div>
-        </section>
+          </nav>
+        </article>
       </div>
     </div>
   </main>

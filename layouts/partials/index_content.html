@@ -1,6 +1,10 @@
-<div class="box is-cols-2">{{ range first 6 (where .Data.Pages "Section" "informations") }}{{ if ne .File.BaseFileName "index" }}
-  <section class="boxes">
-    <h2 class="boxes-title"><a href="{{ .URL }}" title="{{ .Title }}">{{ .Title }}</a></h2>
+<div class="box is-2-cols">
+{{ range first 6 (where .Data.Pages "Section" "informations") }}
+{{ if ne .File.BaseFileName "index" }}
+  <section class="box-items">
+    <h2 class="box-items-title"><a href="{{ .URL }}" title="{{ .Title }}">{{ .Title }}</a></h2>
     <p>{{ .Summary }}</p>
-  </section>{{ end }}{{ end }}
+  </section>
+{{ end }}
+{{ end }}
 </div>
