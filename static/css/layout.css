@@ -125,6 +125,22 @@ img {
       height: 100%;
     }
 
+  .l-main-contents-list {
+    padding: .5rem 0;
+  }
+
+    .l-main-contents-list .list-items {
+      margin: 1rem 0;
+    }
+
+    .l-main-contents-list .list-items-title {
+      font-size: 1rem;
+    }
+
+    .l-main-contents-list .list-items-content .is-page {
+      font-weight: bold;
+    }
+
   .l-main-contents-menu {
     padding: .5rem 0;
   }
