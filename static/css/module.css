@@ -483,7 +483,12 @@
     flex-flow: row nowrap;
   }
     .list-items-title {
-      flex: 0 0 auto;
+      flex: 0 0 8em;
+      text-align: right;
+    }
+    .list-items-title-end {
+      display: block;
+      padding-left: .5em;
     }
     .list-items-content {
       flex: 1 1;
