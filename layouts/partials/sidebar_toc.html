@@ -1,6 +1,8 @@
 <div class="sub-wrap is-right">
+  {{ if eq .File.BaseFileName "index" }}
   <nav class="l-main-toc menu">
     <h2 class="l-main-toc-title">目次</h2>
     {{ .TableOfContents }}
   </nav>
+  {{ end }}
 </div>
