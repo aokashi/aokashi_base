@@ -1,0 +1,30 @@
+  .list-items > ul,
+  .list-items > a,
+  .list-items > p,
+  .list-items > time {
+    margin: 0;
+    padding: .5rem 1rem;
+  }
+
+  .list-items > a {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+  }
+
+  .list-items > a:hover {
+    text-decoration: underline;
+  }
+
+  .list-items > time {
+    display: block;
+  }
+
+  .list.has-title .list-items-title {
+    margin: 0;
+    padding: .5rem;
+  }
+
+    .list.has-title .list-items-content {
+      padding-left: 2rem;
+    }

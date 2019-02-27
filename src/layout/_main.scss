@@ -1,0 +1,140 @@
+.is-page .l-main {
+  background: #fff url('main-background.png') repeat 0 0;
+  color: #404040;
+}
+
+  .is-page .l-main-contents {
+    padding: 0 1rem;
+  }
+
+  .l-main-contents-header,
+  .l-main-contents h3,
+  .l-main-contents h4,
+  .l-main-contents h5 {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+    .l-main-contents-header .list-title {
+      background-color: #d0d0d0;
+      color: #000080;
+      font-size: 1.4rem;
+      margin: 0;
+      padding: 1rem;
+    }
+
+      .l-main-contents-header .list-title a {
+        display: block;
+        text-decoration: none;
+      }
+      .l-main-contents-header .list-title a:hover {
+        text-decoration: underline;
+      }
+
+    .l-main-contents-header .list-items {
+      background-color: #e0e0e0;
+      color: #000080;
+    }
+  
+  .l-main-contents-header.has-image {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 16px center;
+    margin-top: 0;
+    min-height: 160px; /* 160 = 128 + (16 * 2) */
+    padding: 0 0 0 160px;
+  }
+
+    .l-main-contents-header.has-image .list-items {
+      height: 100%;
+    }
+
+  .l-main-contents-list {
+    padding: .5rem 0;
+  }
+
+    .l-main-contents-list .list-items {
+      margin: 1rem 0;
+    }
+
+    .l-main-contents-list .list-items-title {
+      font-size: 1rem;
+    }
+
+    .l-main-contents-list .list-items-content .is-page {
+      font-weight: bold;
+    }
+
+  .l-main-contents-menu {
+    padding: .5rem 0;
+  }
+
+    .l-main-contents-menu .box_menu-items {
+      background-color: #fff;
+      border: 2px solid #c0c0c0;
+    }
+
+    .l-main-contents-menu .box_menu-items-link {
+      background-color: #c0c0c0;
+      color: #000080;
+    }
+
+    .l-main-contents-menu .box_menu-items-title {
+      text-align: center;
+    }
+  
+  /* .set-doc の要素なので、周りの要素に影響を受けないように padding を設定しましょう */
+  .l-main-contents-doc {
+    padding: .5rem 0;
+  }
+
+  /* サイドバーメニュー */
+  .l-main-sidebar_menu {
+    background-color: #60a0ff;
+    padding: 1rem;
+  }
+
+    .l-main-sidebar_menu ul {
+      margin: 0;
+    }
+
+    .l-main-sidebar_menu .menu-items {
+      background-color: #c0c0c0;
+      margin-bottom: .5rem;
+    }
+
+    .l-main-sidebar_menu .menu-items.is-top {
+      font-weight: bold;
+    }
+
+    .l-main-sidebar_menu a {
+      color: inherit;
+      display: block;
+      padding: .5rem;
+      text-decoration: none;
+    }
+
+  /* サイドバー(目次) */
+  .l-main-toc {
+    padding: 1rem;
+  }
+
+    .l-main-toc-title {
+      border-bottom: 1px solid #808080;
+      font-size: 1rem;
+      padding: .5rem;
+    }
+
+    .l-main-toc ul {
+      padding-left: 1rem;
+    }
+
+    .l-main-toc > nav > ul,
+    .l-main-toc > nav > ul > li > ul {
+      padding: 0; /* Hugoの仕様上、このような記述に... */
+    }
+
+    .l-main-toc li {
+      line-height: 1.25;
+      margin: .5rem 0;
+    }

@@ -1,0 +1,22 @@
+{
+  "name": "aokashi_base",
+  "version": "1.0.0",
+  "description": "Stylesheet for Aokashi Home",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aokashi/aokashi_base.git"
+  },
+  "author": "Aokashi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aokashi/aokashi_base/issues"
+  },
+  "homepage": "https://github.com/aokashi/aokashi_base#readme",
+  "dependencies": {
+    "sanitize.css": "^8.0.0"
+  }
+}

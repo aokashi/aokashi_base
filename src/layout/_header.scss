@@ -1,0 +1,48 @@
+.l-header {
+  color: #000080;
+}
+.is-page .l-header {
+  border-bottom: 2px solid #000080;
+}
+
+  .l-header-title {
+    font-size: 1.8rem;
+    margin: 0;
+    text-align: center;
+  }
+  .is-page .l-header-title {
+    height: 56px;
+    margin: 1rem 0;
+  }
+
+  .l-header-menu {
+    overflow-x: auto;
+    overflow-y: hidden;
+    text-align: center;
+  }
+  
+  .l-header-menu > ul {
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    margin: 0 auto;
+  }
+
+  .l-header-menu .menu-items {
+    border-top: 2px solid #909090;
+    white-space: nowrap;
+  }
+
+  .l-header-menu .menu-items.is-current {
+    border-color: #000080;
+  }
+
+  .l-header-menu .menu-items:hover {
+    background-color: #909090;
+  }
+
+    .l-header-menu .menu-items a {
+      display: block;
+      padding: 1rem;
+    }

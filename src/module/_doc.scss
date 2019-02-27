@@ -1,0 +1,86 @@
+.set-doc .box,
+.set-doc .box_menu,
+.set-doc .intro,
+.set-doc .note,
+.set-doc .link_button {
+  margin: 1rem 0;
+}
+
+.set-doc a:link {
+  color: #008080;
+}
+
+.set-doc a:visited {
+  color: #800080;
+}
+
+.set-doc blockquote {
+  background-color: #e0e0e0;
+  padding: 1rem;
+}
+
+.set-doc code {
+  background-color: #e0e0e0;
+}
+
+.set-doc h3,
+.set-doc h4,
+.set-doc h5,
+.set-doc h6 {
+  color: #000080;
+}
+
+.set-doc h3 {
+  background: transparent linear-gradient(to right, #c0c0c0, transparent);
+  border-left: 1.5rem solid #000080;
+  font-size: 1.4rem;
+  padding: .75rem;
+}
+
+.set-doc h4 {
+  border-bottom: 2px solid #000080; /* 6pxは2重線になる3pxを2倍にした値 */
+  font-size: 1.4rem;
+  padding: .5rem .75rem;
+}
+
+.set-doc h5 {
+  border-left: 1rem solid #000080;
+  font-size: 1rem;
+  padding: .5rem;
+}
+
+.set-doc h6 {
+  font-size: 1rem;
+  padding: .5rem;
+}
+
+.set-doc ol,
+.set-doc ul {
+  padding-left: 1.5rem;
+}
+
+.set-doc p {
+  text-indent: 1rem;
+}
+
+.set-doc pre {
+  background-color: #e0e0e0;
+  border: 1px solid #808080;
+  padding: .25rem;
+}
+
+.set-doc table {
+  border: 1px solid #808080;
+  border-collapse: separate;
+  border-spacing: 1px;
+}
+
+.set-doc td,
+.set-doc th {
+  border: 1px solid #808080;
+  padding: .25rem;
+}
+
+.set-doc th {
+  background-color: #e0e0e0;
+}

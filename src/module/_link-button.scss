@@ -1,0 +1,19 @@
+.link_button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.link_button a {
+  background-color: #c0c0c0;
+  border: 2px solid #404040;
+  padding: .5rem;
+}
+.link_button a:link,
+.link_button a:visited {
+  color: #000080;
+  text-decoration: none;
+}
+.link_button a:hover {
+  background-color: #808080;
+}

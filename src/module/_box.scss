@@ -1,0 +1,71 @@
+.box,
+.box_menu,
+.intro {
+  display: flex;
+}
+
+/* .box */
+
+.box,
+.box_menu {
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.box-items,
+.box_menu-items {
+  flex: 0 0 100%;
+  margin: .5rem 0;
+}
+
+.box-items {
+  padding: .5rem;
+}
+
+.box-items-title,
+.box_menu-items-title {
+  margin: 0;
+  padding: .5rem;
+}
+
+.box-items-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.box_menu-items-description {
+  margin: 0;
+  padding: 1rem;
+}
+
+/* .intro */
+
+.intro {
+  align-items: flex-start;
+  flex-flow: column wrap;
+}
+
+  .intro-icon {
+    margin: 0 auto;
+  }
+
+  .intro-items-title {
+    margin: 0 -.5rem 0 -.5rem;
+  }
+
+/* .box_menu */
+
+.box_menu-items-link {
+  display: block;
+}
+
+.box_menu-items-title {
+  font-size: 1rem;
+}
+
+.box_menu-items-image {
+  display: block;
+  margin: 0 auto;
+}
+
+/* スマートフォンでは2分割する横幅が足りないので分割しないままになる、mediaクエリー部分参照のこと */
