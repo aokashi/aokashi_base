@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+$background-image-path: '/css/';
+
 /*
  * -----------
  * Layout Rule
@@ -75,7 +77,7 @@ img {
 /* .l-main */
 
 .is-page .l-main {
-  background: #fff url('main-background.png') repeat 0 0;
+  background: #fff url($background-image-path + 'main-background.png') repeat 0 0;
   color: #404040;
 }
 
@@ -294,11 +296,11 @@ img {
     width: 24px;
   }
   .is-page .l-header:before {
-    background-image: url('header_menu-scroll_arrow-left.png');
+    background-image: url($background-image-path + 'header_menu-scroll_arrow-left.png');
     left: 0;
   }
   .is-page .l-header:after {
-    background-image: url('header_menu-scroll_arrow-right.png');
+    background-image: url($background-image-path + 'header_menu-scroll_arrow-right.png');
     right: 0;
   }
 

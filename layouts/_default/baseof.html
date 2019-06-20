@@ -12,7 +12,8 @@
   <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}img/aokashihome_icon.png">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/sanitize.css">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/module.css">
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/layout.css">
+  {{ $layoutStyle := resources.Get "scss/layout.scss" | toCSS }}
+  <link rel="stylesheet" href="{{ $layoutStyle.Permalink }}">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/theme.css">
   <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
   {{ block "head" . }}
